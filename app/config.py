@@ -32,7 +32,7 @@ INDEX_DIR = Path(os.environ.get("INDEX_DIR", ROOT / "data" / "index"))
 CACHE_DIR = Path(os.environ.get("CACHE_DIR", ROOT / "data" / "cache"))
 SQL_DB_PATH = Path(os.environ.get("SQL_DB_PATH", ROOT / "data" / "provinces.db"))
 
-# Retrieval knobs. The defaults below are the values chosen by eval/eval_retrieval.py
+# Retrieval knobs. Starting values; eval/eval_retrieval.py measures them against alternatives
 # (see README "Evaluation" and eval/results/): do not change them without re-running it.
 RETRIEVER = os.environ.get("RETRIEVER", "hybrid")  # bm25 | dense | hybrid
 CHUNK_WORDS = _i("CHUNK_WORDS", 120)
