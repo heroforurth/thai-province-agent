@@ -1,0 +1,78 @@
+doc_id,name,name_thai,region,capital,population,area_km2,density_per_km2,iso_code
+bangkok,Bangkok,กรุงเทพมหานคร,Central,Bangkok,5456000,1564,3488,TH-10
+amnat-charoen,Amnat Charoen,อำนาจเจริญ,Northeastern,Amnat Charoen,372000,3290,113,TH-37
+ang-thong,Ang Thong,อ่างทอง,Central,Ang Thong,269000,950,283,TH-15
+bueng-kan,Bueng Kan,บึงกาฬ,Northeastern,Bueng Kan,419000,4003,105,TH-38
+buriram,Buriram,บุรีรัมย์,Northeastern,Buriram,1566000,10080,155,TH-31
+chachoengsao,Chachoengsao,ฉะเชิงเทรา,Eastern,Chachoengsao,733000,5169,142,TH-24
+chai-nat,Chai Nat,ชัยนาท,Central,Chai Nat,314000,2506,131,TH-18
+chaiyaphum,Chaiyaphum,ชัยภูมิ,Northeastern,Chaiyaphum,1106000,12698,88,TH-36
+chanthaburi,Chanthaburi,จันทบุรี,Eastern,Chanthaburi,536000,6415,83,TH-22
+chiang-mai,Chiang Mai,เชียงใหม่,Northern,Chiang Mai,1799000,22311,79,TH-50
+chiang-rai,Chiang Rai,เชียงราย,Northern,Chiang Rai,1298000,11503,112,TH-57
+chonburi,Chonburi,ชลบุรี,Eastern,Chonburi,1636000,4508,363,TH-20
+chumphon,Chumphon,ชุมพร,Southern,Chumphon,508000,5998,84,TH-86
+kalasin,Kalasin,กาฬสินธุ์,Northeastern,Kalasin,962000,6936,139,TH-46
+kamphaeng-phet,Kamphaeng Phet,กำแพงเพชร,Central,Kamphaeng Phet,701000,8512,82,TH-62
+kanchanaburi,Kanchanaburi,กาญจนบุรี,Western,Kanchanaburi,896000,19385,46,TH-71
+khon-kaen,Khon Kaen,ขอนแก่น,Northeastern,Khon Kaen,1772000,10659,166,TH-40
+krabi,Krabi,กระบี่,Southern,Krabi,484000,5323,91,TH-81
+lampang,Lampang,ลำปาง,Northern,Lampang,704000,12488,56,TH-52
+lamphun,Lamphun,ลำพูน,Northern,Lamphun,397000,4478,89,TH-51
+loei,Loei,เลย,Northeastern,Loei,632000,10500,60,TH-42
+lopburi,Lopburi,ลพบุรี,Central,Lopburi,725000,6493,111,TH-16
+mae-hong-son,Mae Hong Son,แม่ฮ่องสอน,Northern,Mae Hong Son,288000,12765,23,TH-58
+maha-sarakham,Maha Sarakham,มหาสารคาม,Northeastern,Maha Sarakham,930000,5607,165,TH-44
+mukdahan,Mukdahan,มุกดาหาร,Northeastern,Mukdahan,351000,4126,85,TH-49
+nakhon-nayok,Nakhon Nayok,นครนายก,Central,Nakhon Nayok,260000,2141,121,TH-26
+nakhon-pathom,Nakhon Pathom,นครปฐม,Central,Mueang Nakhon Pathom,926000,2142,432,TH-73
+nakhon-phanom,Nakhon Phanom,นครพนม,Northeastern,Nakhon Phanom,711000,5637,125,TH-48
+nakhon-ratchasima,Nakhon Ratchasima,นครราชสีมา,Northeastern,Nakhon Ratchasima,2620000,20736,126,TH-30
+nakhon-sawan,Nakhon Sawan,นครสวรรค์,Central,Nakhon Sawan,1014000,9526,106,TH-60
+nakhon-si-thammarat,Nakhon Si Thammarat,นครศรีธรรมราช,Southern,Nakhon Si Thammarat,1535000,9885,154,TH-80
+nan,Nan,น่าน,Northern,Nan,471000,12130,39,TH-55
+narathiwat,Narathiwat,นราธิวาส,Southern,Narathiwat,824000,4491,183,TH-96
+nong-bua-lamphu,Nong Bua Lamphu,หนองบัวลำภู,Northeastern,Nong Bua Lam Phu,504000,4099,123,TH-39
+nong-khai,Nong Khai,หนองคาย,Northeastern,Nong Khai,512000,3275,156,TH-43
+nonthaburi,Nonthaburi,นนทบุรี,Central,Nonthaburi,1318000,637,2069,TH-12
+pathum-thani,Pathum Thani,ปทุมธานี,Central,Pathum Thani,1236000,1520,813,TH-13
+pattani,Pattani,ปัตตานี,Southern,Pattani,741000,1977,375,TH-94
+phang-nga,Phang Nga,พังงา,Southern,Phang Nga,266000,5495,49,TH-82
+phatthalung,Phatthalung,พัทลุง,Southern,Phatthalung,519000,3861,135,TH-93
+phayao,Phayao,พะเยา,Northern,Phayao,455000,6189,74,TH-56
+phetchabun,Phetchabun,เพชรบูรณ์,Central,Phetchabun,961000,12340,75,TH-67
+phetchaburi,Phetchaburi,เพชรบุรี,Western,Phetchaburi,484100,6172,76,TH-76
+phichit,Phichit,พิจิตร,Central,Phichit,517000,4319,120,TH-66
+phitsanulok,Phitsanulok,พิษณุโลก,Central,Phitsanulok,839000,10589,78,TH-65
+phra-nakhon-si-ayutthaya,Phra Nakhon Si Ayutthaya,พระนครศรีอยุธยา,Central,Ayutthaya,823000,2548,323,TH-14
+phrae,Phrae,แพร่,Northern,Phrae,422000,6483,65,TH-54
+phuket,Phuket,ภูเก็ต,Southern,Phuket City,430000,547,786,TH-83
+prachinburi,Prachinburi,ปราจีนบุรี,Eastern,Prachinburi,501000,5026,100,TH-25
+prachuap-khiri-khan,Prachuap Khiri Khan,ประจวบคีรีขันธ์,Western,Prachuap Khiri Khan,552000,6414,87,TH-77
+ranong,Ranong,ระนอง,Southern,Ranong,193000,3230,59,TH-85
+ratchaburi,Ratchaburi,ราชบุรี,Western,Ratchaburi,864000,5189,167,TH-70
+rayong,Rayong,ระยอง,Eastern,Rayong,782000,3666,213,TH-21
+roi-et,Roi Et,ร้อยเอ็ด,Northeastern,Roi Et,1276000,7873,162,TH-45
+sa-kaeo,Sa Kaeo,สระแก้ว,Eastern,Sa Kaeo,562000,6831,80,TH-27
+sakon-nakhon,Sakon Nakhon,สกลนคร,Northeastern,Sakon Nakhon,1138000,9580,118,TH-47
+samut-prakan,Samut Prakan,สมุทรปราการ,Central,Mueang Samut Prakan,1381000,947,1458,TH-11
+samut-sakhon,Samut Sakhon,สมุทรสาคร,Central,Mueang Samut Sakhon,591000,866,682,TH-74
+samut-songkhram,Samut Songkhram,สมุทรสงคราม,Central,Samut Songkhram,187000,414,452,TH-75
+saraburi,Saraburi,สระบุรี,Central,Saraburi,639000,3499,182,TH-19
+satun,Satun,สตูล,Southern,Satun,325000,3019,108,TH-91
+sing-buri,Sing Buri,สิงห์บุรี,Central,Sing Buri,200000,817,245,TH-17
+sisaket,Sisaket,ศรีสะเกษ,Northeastern,Sisaket,1442000,8936,161,TH-33
+songkhla,Songkhla,สงขลา,Southern,Songkhla,1431000,7741,185,TH-90
+sukhothai,Sukhothai,สุโขทัย,Central,Sukhothai Thani,573000,6671,86,TH-64
+suphan-buri,Suphan Buri,สุพรรณบุรี,Central,Suphan Buri,822000,5410,152,TH-72
+surat-thani,Surat Thani,สุราษฎร์ธานี,Southern,Surat Thani,1077000,13079,81,TH-84
+surin,Surin,สุรินทร์,Northeastern,Surin,1360000,8854,153,TH-32
+tak,Tak,ตาก,Western,Tak,699000,17303,40,TH-63
+trang,Trang,ตรัง,Southern,Trang,635000,4726,134,TH-92
+trat,Trat,ตราด,Eastern,Trat,227000,2866,77,TH-23
+ubon-ratchathani,Ubon Ratchathani,อุบลราชธานี,Northeastern,Mueang Ubon Ratchathani,1868000,15626,119,TH-34
+udon-thani,Udon Thani,อุดรธานี,Northeastern,Udon Thani,1552000,11072,140,TH-41
+uthai-thani,Uthai Thani,อุทัยธานี,Central,Uthai Thani,320000,6647,48,TH-61
+uttaradit,Uttaradit,อุตรดิตถ์,Northern,Uttaradit,436000,7906,55,TH-53
+yala,Yala,ยะลา,Southern,Yala,553000,4476,124,TH-95
+yasothon,Yasothon,ยโสธร,Northeastern,Yasothon,525000,4131,127,TH-35

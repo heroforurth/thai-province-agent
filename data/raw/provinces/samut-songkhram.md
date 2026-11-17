@@ -1,0 +1,102 @@
+# Samut Songkhram
+
+Source: https://en.wikipedia.org/wiki/Samut_Songkhram_province (Wikipedia, CC BY-SA 4.0)
+
+Samut Songkhram (Thai: สมุทรสงคราม, pronounced [sā.mùt sǒŋ.kʰrāːm]) is one of the central provinces (changwat) of Thailand.
+Neighbouring provinces are (from the south clockwise) Phetchaburi, Ratchaburi and Samut Sakhon. Local people call Samut Songkhram Mae Klong. The province is the smallest in area of all Thai provinces. Chang and Eng Bunker, the famous Siamese twins were born here on 11 May 1811.
+
+## Toponymy
+The word "samut" originates from the Sanskrit word समुद्र samudra meaning 'ocean', and the word "songkhram" from Sanskrit संग्राम saṃgrāma meaning 'war'. Hence the name of the province literally means 'war ocean'.
+However, this province is colloquially known as "Mae Klong" after the name of the main river that flows past the area.
+
+## Geography
+
+Samut Songkhram is at the mouth of the Mae Klong River to the Bay of Bangkok (upper Gulf of Thailand). With several canals (khlong) the water of the river is spread through the province for irrigation. At the coast are many lakes for producing sea salt. The sandbar Don Hoi Lot at the mouth of the river is famous for its endemic shell population of Solen regularis.
+It covers a total area of 416.7 km2 (about 160.9 sq mi).  It can be considered the smallest province in Thailand. The total forest area is 30 km2 (12 sq mi) or 7.3 percent of provincial area.
+This province is home to places of worship of the three major religions. There are 110 Buddhist temples, two Christian churches and one mosque. Additionally, Samut Songkhram is also home to the oldest Chinese joss house and almshouse in Thailand, which is over 215 years old.
+
+## History
+Samut Songkhram or Mae Klong or Suan Nok (outside garden) was a part of Mueang Ratchaburi in the past. The old name of Mae Klong is Bang Chang which was centered at Tambon Amphawa, Samut Songkhram (from the district at present). During the transition from the Ayutthaya to the Thon Buri periods, it was separated from Ratchaburi and named Mueang Mae Klong.
+Samut Songkhram was historically important during the establishment of Thon Buri as the kingdom's capital by King Taksin the Great. When the Burmese led an army to Tambon Bang Kung, the king gathered the people to build a fort and prevent the city from capture by the Burmese troops. This was an important act against the Burmese invaders at that time.
+Mueang Mae Klong (actually pronounced "Mae Glawng"), changed its name into Samut Songkhram but the actual year is not known. It is assumed it occurred in 1752 to 1756 because the name of the province first appeared in the evidence from the first Thai enacted law: Later, a decree was found,issued from the reign of King Borommakot in 1756 and was identified as ordered to The Lord Rattanathibet, the Grand marshal of the Court. Apparently Kun Wisetvanish (Chean Ar Pan Teck), Kun Thip, and Meun Rukka Auksorn were daring ask to establish casinos in Samut Songkhram, Ratchaburi and Samut Prakan.
+Samut Songkhram is the birthplace of many famous Thai people whether King Rama II who was born in 1767 in Amphawa District or Chang and Eng Bunker who were born in 1811.
+
+## Symbols
+The provincial seal shows a drum over a river. The Thai word for drum is klong, thus refers to the Mae Klong River, as well as the old name of the province, Mae Klong. On both sides of the river coconut trees are displayed as one of the main products of the province.
+The provincial tree is Casuarina equisetifolia. Siamese giant carp (Catlocarpio siamensis) is the provincial fish.
+The provincial slogan is "City of razor shells. Tops of the lychee trees. King Rama II Park. Passage of the Maeklong river. Worship the Buddhist image of Luang Pho Ban Laem."
+
+## Administrative divisions
+
+### Central government
+The province is divided into three districts (amphoe). The districts are further divided into 36 subdistricts (tambons) and 284 villages (mubans). 
+
+### Local government
+As of December 2023 there are: one Samut Songkhram provincial administrative organization - PAO (ongkan borihan suan changwat - o bo toh) and nine municipal (thesaban) areas in the province. The capital Samut Songkhram has town (thesaban mueang) status and eight are subdistrict municipalities (thesaban tambon). 
+
+The non-municipal areas are administered by 26 subdistrict administrative organizations (SAO) (ongkan borihan suan tambon).
+
+## Healthcare
+
+### Hospitals
+There are three hospitals in the province:
+
+Samut Songkhram general hospital with 282 beds
+Napalai community hospital (Bang Khonthi) with 90 beds
+Amphawa community hospital with 33 beds
+
+### Health promoting hospitals
+There are total forty-nine health-promoting hospitals in the province, of which;
+
+19 in Mueang Samut Songkhram district
+13 in Bang Khonthi district
+17 in Amphawa district
+
+## Demographics
+
+### Population
+Population history of Samut Songkhram province is as follows:
+
+### Religion
+There are one hundred and twenty Theravada Buddhist temples in the province.
+
+47 in Mueang Samut Songkhram district
+25 in Bang Khonthi district
+48 in Amphawa district.
+
+### Climate
+Samut Songkhram province has a tropical savanna climate (Köppen climate classification Aw). Winters are dry and very warm. Temperatures rise until April, which is very hot with the average daily maximum at 35.0 °C (95.0 °F). The monsoon season runs from May through October, with heavy rain and somewhat cooler temperatures during the day, although nights remain warm.
+
+## Economy
+
+### Economic output
+In 2022, Samut Songkhram province had an economic output of 29.2 billion baht (US$853 million). This amounts to per capita gross provincial product (GPP) of 165,279 baht (US$4,830). In 2024 the total workforce was 147,210 of which 104,056 persons were employed in economic activity. In agriculture and fishing 18,918 persons (18.2%) were employed and in the non-agricultural sector 85,138 persons (81.8%).
+
+### Economic activity
+Samut Songkhram is a leader in Thai salt production, with 4,535 rai worked in 2011 by 111 households to produce salt.
+Aside from salt Samut Songkhram is also known for the variety of fruits, especially lychee, pomelo and coconut.
+
+### Local products
+Pla thu (ปลาทู, 'short mackerel') is regarded as an important commercial fish and the most famous product of the province. Mackerel from Samut Songkhram is well known as "Pla Thu Mae Klong." Because the province borders the Bay of Bangkok, which is rich in plankton, the staple food of this fish species, Samut Songkhram's pla thu have a distinctive characteristic locally called "na ngo kor hak" (หน้างอ คอหัก, "curved face, broken neck"). This unique trait contributes to their large body size and delicious meat.
+They can be cooked into a variety of dishes such as Pla thu tom madan (ปลาทูต้มมะดัน, 'pla thu in spicy and sour soup'), Chu chee pla thu (ฉู่ฉี่ปลาทู, 'pla thu in red curry sauce'), Pla thu sa tia (ปลาทูซาเตี๊ยะ, 'pla thu in sweet black soup'), and even pla thu burgers made from their meat, a specialty that can only be found in Samut Songkhram.
+One exclusive dish is Khao tom sam kasat (ข้าวต้มสามกษัตริย์, "three kings porridge"), a congee featuring pla thu, prawn, and fresh squid. This menu is said to have originated from King Rama V's visit to the people at Mae Klong. He personally prepared this dish based on his own original ideas, and it has since become a legendary food. It is even recorded that Prince Damrong Rajanubhab remarked he had never tasted congee as delicious anywhere else.
+
+## Local festivals
+The Celebrations of King Rama II: organized every early February, which was the birth month of King Rama II at King Rama II Memorial Park.
+Worship and bathing Luangpho Ban Laem ceremony: organized every mid April, which falls on Songkran festival at Wat Ban Laem.
+Mackerel festival: organized regularly at the end of the year (November or December) to promote the consumption of Pla thu at Provincial Hall.
+Loy Krathong Kab-kluai: Samut Songkhram's Loy Krathong is unique, as krathongs here are made from banana leaf-sheaf (Kab-kluai in Thai), adorned with locally renowned incense sticks that burn for a long time. The event takes place at Wat Phumarin Kudi Thong by the Mae Klong River.
+
+## Transport
+
+### Rail
+
+Samut Songkhram's main station, Maeklong railway station, is on the Maeklong Railway. The railway is known for its route through the Maeklong Railway Market, nicknamed (Thai: ตลาดร่มหุบ; RTGS: talat rom hup), meaning the 'umbrella pulldown market'. It is one of the largest seafood markets in Thailand, and is centred on the Maeklong Railway's track. Whenever a train approaches, the awnings and shop fronts are moved back from the rails, to be replaced once the train has passed.
+
+### Road
+Rama II Road is a main road of Samut Songkhram, it is a road that leads to south as well as Petchkasem Road, starting from Bangkok's Thonburi side. Its named in honour to King Rama II. Samut Songkhram is about 63 km (39 mi) from Bangkok by this road.
+The famous floating market, Talat Nam Amphawa can be reached by this road.
+
+## Human achievement index 2022
+
+Since 2003, United Nations Development Programme (UNDP) in Thailand has tracked progress on human development at sub-national level using the Human achievement index (HAI), a composite index covering all the eight key areas of human development. National Economic and Social Development Board (NESDB) has taken over this task since 2017.

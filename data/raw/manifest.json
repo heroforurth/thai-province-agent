@@ -1,0 +1,464 @@
+[
+  {
+    "doc_id": "bangkok",
+    "title": "Bangkok",
+    "url": "https://en.wikipedia.org/wiki/Bangkok",
+    "chars": 65937
+  },
+  {
+    "doc_id": "amnat-charoen",
+    "title": "Amnat Charoen",
+    "url": "https://en.wikipedia.org/wiki/Amnat_Charoen_province",
+    "chars": 4759
+  },
+  {
+    "doc_id": "ang-thong",
+    "title": "Ang Thong",
+    "url": "https://en.wikipedia.org/wiki/Ang_Thong_province",
+    "chars": 4547
+  },
+  {
+    "doc_id": "bueng-kan",
+    "title": "Bueng Kan",
+    "url": "https://en.wikipedia.org/wiki/Bueng_Kan_province",
+    "chars": 5372
+  },
+  {
+    "doc_id": "buriram",
+    "title": "Buriram",
+    "url": "https://en.wikipedia.org/wiki/Buriram_province",
+    "chars": 10327
+  },
+  {
+    "doc_id": "chachoengsao",
+    "title": "Chachoengsao",
+    "url": "https://en.wikipedia.org/wiki/Chachoengsao_province",
+    "chars": 6629
+  },
+  {
+    "doc_id": "chai-nat",
+    "title": "Chai Nat",
+    "url": "https://en.wikipedia.org/wiki/Chai_Nat_province",
+    "chars": 7422
+  },
+  {
+    "doc_id": "chaiyaphum",
+    "title": "Chaiyaphum",
+    "url": "https://en.wikipedia.org/wiki/Chaiyaphum_province",
+    "chars": 7023
+  },
+  {
+    "doc_id": "chanthaburi",
+    "title": "Chanthaburi",
+    "url": "https://en.wikipedia.org/wiki/Chanthaburi_province",
+    "chars": 10775
+  },
+  {
+    "doc_id": "chiang-mai",
+    "title": "Chiang Mai",
+    "url": "https://en.wikipedia.org/wiki/Chiang_Mai_province",
+    "chars": 10206
+  },
+  {
+    "doc_id": "chiang-rai",
+    "title": "Chiang Rai",
+    "url": "https://en.wikipedia.org/wiki/Chiang_Rai_province",
+    "chars": 8111
+  },
+  {
+    "doc_id": "chonburi",
+    "title": "Chonburi",
+    "url": "https://en.wikipedia.org/wiki/Chonburi_province",
+    "chars": 11952
+  },
+  {
+    "doc_id": "chumphon",
+    "title": "Chumphon",
+    "url": "https://en.wikipedia.org/wiki/Chumphon_province",
+    "chars": 9900
+  },
+  {
+    "doc_id": "kalasin",
+    "title": "Kalasin",
+    "url": "https://en.wikipedia.org/wiki/Kalasin_province",
+    "chars": 9639
+  },
+  {
+    "doc_id": "kamphaeng-phet",
+    "title": "Kamphaeng Phet",
+    "url": "https://en.wikipedia.org/wiki/Kamphaeng_Phet_province",
+    "chars": 6086
+  },
+  {
+    "doc_id": "kanchanaburi",
+    "title": "Kanchanaburi",
+    "url": "https://en.wikipedia.org/wiki/Kanchanaburi_province",
+    "chars": 16715
+  },
+  {
+    "doc_id": "khon-kaen",
+    "title": "Khon Kaen",
+    "url": "https://en.wikipedia.org/wiki/Khon_Kaen_province",
+    "chars": 7975
+  },
+  {
+    "doc_id": "krabi",
+    "title": "Krabi",
+    "url": "https://en.wikipedia.org/wiki/Krabi_province",
+    "chars": 16215
+  },
+  {
+    "doc_id": "lampang",
+    "title": "Lampang",
+    "url": "https://en.wikipedia.org/wiki/Lampang_province",
+    "chars": 5974
+  },
+  {
+    "doc_id": "lamphun",
+    "title": "Lamphun",
+    "url": "https://en.wikipedia.org/wiki/Lamphun_province",
+    "chars": 6239
+  },
+  {
+    "doc_id": "loei",
+    "title": "Loei",
+    "url": "https://en.wikipedia.org/wiki/Loei_province",
+    "chars": 5362
+  },
+  {
+    "doc_id": "lopburi",
+    "title": "Lopburi",
+    "url": "https://en.wikipedia.org/wiki/Lopburi_province",
+    "chars": 7869
+  },
+  {
+    "doc_id": "mae-hong-son",
+    "title": "Mae Hong Son",
+    "url": "https://en.wikipedia.org/wiki/Mae_Hong_Son_province",
+    "chars": 12419
+  },
+  {
+    "doc_id": "maha-sarakham",
+    "title": "Maha Sarakham",
+    "url": "https://en.wikipedia.org/wiki/Maha_Sarakham_province",
+    "chars": 4261
+  },
+  {
+    "doc_id": "mukdahan",
+    "title": "Mukdahan",
+    "url": "https://en.wikipedia.org/wiki/Mukdahan_province",
+    "chars": 74486
+  },
+  {
+    "doc_id": "nakhon-nayok",
+    "title": "Nakhon Nayok",
+    "url": "https://en.wikipedia.org/wiki/Nakhon_Nayok_province",
+    "chars": 6268
+  },
+  {
+    "doc_id": "nakhon-pathom",
+    "title": "Nakhon Pathom",
+    "url": "https://en.wikipedia.org/wiki/Nakhon_Pathom_province",
+    "chars": 12678
+  },
+  {
+    "doc_id": "nakhon-phanom",
+    "title": "Nakhon Phanom",
+    "url": "https://en.wikipedia.org/wiki/Nakhon_Phanom_province",
+    "chars": 8221
+  },
+  {
+    "doc_id": "nakhon-ratchasima",
+    "title": "Nakhon Ratchasima",
+    "url": "https://en.wikipedia.org/wiki/Nakhon_Ratchasima_province",
+    "chars": 7206
+  },
+  {
+    "doc_id": "nakhon-sawan",
+    "title": "Nakhon Sawan",
+    "url": "https://en.wikipedia.org/wiki/Nakhon_Sawan_province",
+    "chars": 5482
+  },
+  {
+    "doc_id": "nakhon-si-thammarat",
+    "title": "Nakhon Si Thammarat",
+    "url": "https://en.wikipedia.org/wiki/Nakhon_Si_Thammarat_province",
+    "chars": 12911
+  },
+  {
+    "doc_id": "nan",
+    "title": "Nan",
+    "url": "https://en.wikipedia.org/wiki/Nan_province",
+    "chars": 7767
+  },
+  {
+    "doc_id": "narathiwat",
+    "title": "Narathiwat",
+    "url": "https://en.wikipedia.org/wiki/Narathiwat_province",
+    "chars": 9088
+  },
+  {
+    "doc_id": "nong-bua-lamphu",
+    "title": "Nong Bua Lamphu",
+    "url": "https://en.wikipedia.org/wiki/Nong_Bua_Lamphu_province",
+    "chars": 9368
+  },
+  {
+    "doc_id": "nong-khai",
+    "title": "Nong Khai",
+    "url": "https://en.wikipedia.org/wiki/Nong_Khai_province",
+    "chars": 5436
+  },
+  {
+    "doc_id": "nonthaburi",
+    "title": "Nonthaburi",
+    "url": "https://en.wikipedia.org/wiki/Nonthaburi_province",
+    "chars": 10650
+  },
+  {
+    "doc_id": "pathum-thani",
+    "title": "Pathum Thani",
+    "url": "https://en.wikipedia.org/wiki/Pathum_Thani_province",
+    "chars": 9162
+  },
+  {
+    "doc_id": "pattani",
+    "title": "Pattani",
+    "url": "https://en.wikipedia.org/wiki/Pattani_province",
+    "chars": 7329
+  },
+  {
+    "doc_id": "phang-nga",
+    "title": "Phang Nga",
+    "url": "https://en.wikipedia.org/wiki/Phang_Nga_province",
+    "chars": 11465
+  },
+  {
+    "doc_id": "phatthalung",
+    "title": "Phatthalung",
+    "url": "https://en.wikipedia.org/wiki/Phatthalung_province",
+    "chars": 6826
+  },
+  {
+    "doc_id": "phayao",
+    "title": "Phayao",
+    "url": "https://en.wikipedia.org/wiki/Phayao_province",
+    "chars": 9970
+  },
+  {
+    "doc_id": "phetchabun",
+    "title": "Phetchabun",
+    "url": "https://en.wikipedia.org/wiki/Phetchabun_province",
+    "chars": 7618
+  },
+  {
+    "doc_id": "phetchaburi",
+    "title": "Phetchaburi",
+    "url": "https://en.wikipedia.org/wiki/Phetchaburi_province",
+    "chars": 11096
+  },
+  {
+    "doc_id": "phichit",
+    "title": "Phichit",
+    "url": "https://en.wikipedia.org/wiki/Phichit_province",
+    "chars": 9771
+  },
+  {
+    "doc_id": "phitsanulok",
+    "title": "Phitsanulok",
+    "url": "https://en.wikipedia.org/wiki/Phitsanulok_province",
+    "chars": 20382
+  },
+  {
+    "doc_id": "phra-nakhon-si-ayutthaya",
+    "title": "Phra Nakhon Si Ayutthaya",
+    "url": "https://en.wikipedia.org/wiki/Phra_Nakhon_Si_Ayutthaya_province",
+    "chars": 10260
+  },
+  {
+    "doc_id": "phrae",
+    "title": "Phrae",
+    "url": "https://en.wikipedia.org/wiki/Phrae_province",
+    "chars": 6847
+  },
+  {
+    "doc_id": "phuket",
+    "title": "Phuket",
+    "url": "https://en.wikipedia.org/wiki/Phuket_province",
+    "chars": 29781
+  },
+  {
+    "doc_id": "prachinburi",
+    "title": "Prachinburi",
+    "url": "https://en.wikipedia.org/wiki/Prachinburi_province",
+    "chars": 7036
+  },
+  {
+    "doc_id": "prachuap-khiri-khan",
+    "title": "Prachuap Khiri Khan",
+    "url": "https://en.wikipedia.org/wiki/Prachuap_Khiri_Khan_province",
+    "chars": 7516
+  },
+  {
+    "doc_id": "ranong",
+    "title": "Ranong",
+    "url": "https://en.wikipedia.org/wiki/Ranong_province",
+    "chars": 11750
+  },
+  {
+    "doc_id": "ratchaburi",
+    "title": "Ratchaburi",
+    "url": "https://en.wikipedia.org/wiki/Ratchaburi_province",
+    "chars": 6647
+  },
+  {
+    "doc_id": "rayong",
+    "title": "Rayong",
+    "url": "https://en.wikipedia.org/wiki/Rayong_province",
+    "chars": 3965
+  },
+  {
+    "doc_id": "roi-et",
+    "title": "Roi Et",
+    "url": "https://en.wikipedia.org/wiki/Roi_Et_province",
+    "chars": 4036
+  },
+  {
+    "doc_id": "sa-kaeo",
+    "title": "Sa Kaeo",
+    "url": "https://en.wikipedia.org/wiki/Sa_Kaeo_province",
+    "chars": 5588
+  },
+  {
+    "doc_id": "sakon-nakhon",
+    "title": "Sakon Nakhon",
+    "url": "https://en.wikipedia.org/wiki/Sakon_Nakhon_province",
+    "chars": 5743
+  },
+  {
+    "doc_id": "samut-prakan",
+    "title": "Samut Prakan",
+    "url": "https://en.wikipedia.org/wiki/Samut_Prakan_province",
+    "chars": 9598
+  },
+  {
+    "doc_id": "samut-sakhon",
+    "title": "Samut Sakhon",
+    "url": "https://en.wikipedia.org/wiki/Samut_Sakhon_province",
+    "chars": 10065
+  },
+  {
+    "doc_id": "samut-songkhram",
+    "title": "Samut Songkhram",
+    "url": "https://en.wikipedia.org/wiki/Samut_Songkhram_province",
+    "chars": 9347
+  },
+  {
+    "doc_id": "saraburi",
+    "title": "Saraburi",
+    "url": "https://en.wikipedia.org/wiki/Saraburi_province",
+    "chars": 7072
+  },
+  {
+    "doc_id": "satun",
+    "title": "Satun",
+    "url": "https://en.wikipedia.org/wiki/Satun_province",
+    "chars": 7734
+  },
+  {
+    "doc_id": "sing-buri",
+    "title": "Sing Buri",
+    "url": "https://en.wikipedia.org/wiki/Sing_Buri_province",
+    "chars": 10743
+  },
+  {
+    "doc_id": "sisaket",
+    "title": "Sisaket",
+    "url": "https://en.wikipedia.org/wiki/Sisaket_province",
+    "chars": 5281
+  },
+  {
+    "doc_id": "songkhla",
+    "title": "Songkhla",
+    "url": "https://en.wikipedia.org/wiki/Songkhla_province",
+    "chars": 16233
+  },
+  {
+    "doc_id": "sukhothai",
+    "title": "Sukhothai",
+    "url": "https://en.wikipedia.org/wiki/Sukhothai_province",
+    "chars": 23222
+  },
+  {
+    "doc_id": "suphan-buri",
+    "title": "Suphan Buri",
+    "url": "https://en.wikipedia.org/wiki/Suphan_Buri_province",
+    "chars": 11014
+  },
+  {
+    "doc_id": "surat-thani",
+    "title": "Surat Thani",
+    "url": "https://en.wikipedia.org/wiki/Surat_Thani_province",
+    "chars": 12856
+  },
+  {
+    "doc_id": "surin",
+    "title": "Surin",
+    "url": "https://en.wikipedia.org/wiki/Surin_province",
+    "chars": 13485
+  },
+  {
+    "doc_id": "tak",
+    "title": "Tak",
+    "url": "https://en.wikipedia.org/wiki/Tak_province",
+    "chars": 7268
+  },
+  {
+    "doc_id": "trang",
+    "title": "Trang",
+    "url": "https://en.wikipedia.org/wiki/Trang_province",
+    "chars": 12802
+  },
+  {
+    "doc_id": "trat",
+    "title": "Trat",
+    "url": "https://en.wikipedia.org/wiki/Trat_province",
+    "chars": 9205
+  },
+  {
+    "doc_id": "ubon-ratchathani",
+    "title": "Ubon Ratchathani",
+    "url": "https://en.wikipedia.org/wiki/Ubon_Ratchathani_province",
+    "chars": 6116
+  },
+  {
+    "doc_id": "udon-thani",
+    "title": "Udon Thani",
+    "url": "https://en.wikipedia.org/wiki/Udon_Thani_province",
+    "chars": 11247
+  },
+  {
+    "doc_id": "uthai-thani",
+    "title": "Uthai Thani",
+    "url": "https://en.wikipedia.org/wiki/Uthai_Thani_province",
+    "chars": 3546
+  },
+  {
+    "doc_id": "uttaradit",
+    "title": "Uttaradit",
+    "url": "https://en.wikipedia.org/wiki/Uttaradit_province",
+    "chars": 10899
+  },
+  {
+    "doc_id": "yala",
+    "title": "Yala",
+    "url": "https://en.wikipedia.org/wiki/Yala_province",
+    "chars": 5492
+  },
+  {
+    "doc_id": "yasothon",
+    "title": "Yasothon",
+    "url": "https://en.wikipedia.org/wiki/Yasothon_province",
+    "chars": 3621
+  }
+]
