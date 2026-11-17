@@ -1,0 +1,55 @@
+{"id": "r01", "query": "Which province has the Bridge over the River Kwai?", "doc_id": "kanchanaburi", "evidence": "Bridge over the River Kwai", "style": "implicit"}
+{"id": "r02", "query": "Where is the prehistoric Bronze Age site of Ban Chiang?", "doc_id": "udon-thani", "evidence": "Ban Chiang", "style": "implicit"}
+{"id": "r03", "query": "Which province contains the rock island nicknamed James Bond Island?", "doc_id": "phang-nga", "evidence": "James Bond Island", "style": "implicit"}
+{"id": "r04", "query": "Where is the highest mountain in Thailand?", "doc_id": "chiang-mai", "evidence": "Doi Inthanon", "style": "implicit"}
+{"id": "r05", "query": "Which province is home to the biggest national park in the country?", "doc_id": "phetchaburi", "evidence": "Kaeng Krachan", "style": "implicit"}
+{"id": "r06", "query": "Where is the largest natural lake in Thailand?", "doc_id": "songkhla", "evidence": "largest natural lake in Thailand", "style": "implicit"}
+{"id": "r07", "query": "Which province holds an annual buffet festival for macaques?", "doc_id": "lopburi", "evidence": "Monkey Buffet Festival", "style": "implicit"}
+{"id": "r08", "query": "Which province was historically an important source of rubies and sapphires?", "doc_id": "chanthaburi", "evidence": "rubies and sapphires", "style": "implicit"}
+{"id": "r09", "query": "Where is the Khmer temple ruin built on top of an extinct volcano?", "doc_id": "buriram", "evidence": "extinct volcano", "style": "implicit"}
+{"id": "r10", "query": "Which province raises about a quarter of all the elephants in Thailand?", "doc_id": "surin", "evidence": "25 percent of all the elephants", "style": "implicit"}
+{"id": "r11", "query": "Where is the country's largest island?", "doc_id": "phuket", "evidence": "largest island", "style": "implicit"}
+{"id": "r12", "query": "Which province is the second-least populous in Thailand?", "doc_id": "ranong", "evidence": "second-least populous", "style": "implicit"}
+{"id": "r13", "query": "What is the southernmost province of Thailand?", "doc_id": "yala", "evidence": "southernmost", "style": "implicit"}
+{"id": "r14", "query": "Which province was created most recently, in 2011?", "doc_id": "bueng-kan", "evidence": "76th", "style": "implicit"}
+{"id": "r15", "query": "Where is the rainforest that is older and more diverse than the Amazon?", "doc_id": "surat-thani", "evidence": "older and more diverse than the Amazon", "style": "implicit"}
+{"id": "r16", "query": "Which province has the Queen Sirikit Dam and its artificial lake?", "doc_id": "uttaradit", "evidence": "Sirikit Dam", "style": "implicit"}
+{"id": "r17", "query": "Where is the Bhumibol Dam, formerly called the Yanhee Dam?", "doc_id": "tak", "evidence": "Bhumibol Dam", "style": "implicit"}
+{"id": "r18", "query": "Which province is nicknamed the city of three mists?", "doc_id": "mae-hong-son", "evidence": "city of three mists", "style": "implicit"}
+{"id": "r19", "query": "In which province does the southern railway line end?", "doc_id": "narathiwat", "evidence": "southern railway line ends", "style": "implicit"}
+{"id": "r20", "query": "Which province is home to Laem Chabang, the country's primary seaport?", "doc_id": "chonburi", "evidence": "Laem Chabang", "style": "implicit"}
+{"id": "r21", "query": "Where is the First Thai-Lao Friendship Bridge that opened in 1994?", "doc_id": "nong-khai", "evidence": "opened in 1994", "style": "implicit"}
+{"id": "r22", "query": "Which province's old capital ruins became a UNESCO World Heritage Site in December 1991?", "doc_id": "phra-nakhon-si-ayutthaya", "evidence": "World Heritage Site since December 1991", "style": "implicit"}
+{"id": "r23", "query": "Where is the Huai Kha Khaeng wildlife sanctuary?", "doc_id": "uthai-thani", "evidence": "Huai Kha Khaeng", "style": "implicit"}
+{"id": "r24", "query": "Where is the biggest natural lake of northeast Thailand?", "doc_id": "sakon-nakhon", "evidence": "Nong Han", "style": "implicit"}
+{"id": "r25", "query": "Which province has a temple built around a footprint of the Buddha?", "doc_id": "saraburi", "evidence": "footprint of Buddha", "style": "implicit"}
+{"id": "r26", "query": "Which province is known for longan orchards and Wat Phra That Hariphunchai?", "doc_id": "lamphun", "evidence": "longan orchards", "style": "implicit"}
+{"id": "r27", "query": "Where can you see fields of Siam tulips in Sai Thong National Park?", "doc_id": "chaiyaphum", "evidence": "Siam tulip", "style": "implicit"}
+{"id": "r28", "query": "Which province is associated with the defence of Bang Rachan against the Burmese in 1765?", "doc_id": "sing-buri", "evidence": "Bang Rachan", "style": "implicit"}
+{"id": "r29", "query": "Where is the resort town where King Prajadhipok built a summer palace?", "doc_id": "prachuap-khiri-khan", "evidence": "Hua Hin", "style": "implicit"}
+{"id": "r30", "query": "Which province contains the third biggest island of Thailand?", "doc_id": "trat", "evidence": "third biggest island", "style": "implicit"}
+{"id": "r31", "query": "What does the name Phichit mean?", "doc_id": "phichit", "evidence": "beautiful", "style": "explicit"}
+{"id": "r32", "query": "What does the name Ang Thong mean?", "doc_id": "ang-thong", "evidence": "gold basin", "style": "explicit"}
+{"id": "r33", "query": "What was the old name of Lampang?", "doc_id": "lampang", "evidence": "Khelang Nakhon", "style": "explicit"}
+{"id": "r34", "query": "What does Surat Thani mean and who gave the city that title?", "doc_id": "surat-thani", "evidence": "city of good people", "style": "explicit"}
+{"id": "r35", "query": "Why is Roi Et's name written as 101?", "doc_id": "roi-et", "evidence": "eleven ancient gates", "style": "explicit"}
+{"id": "r36", "query": "What percentage of Chiang Mai province is covered by forest?", "doc_id": "chiang-mai", "evidence": "69.6 percent", "style": "explicit"}
+{"id": "r37", "query": "What is the other common name for Nakhon Ratchasima?", "doc_id": "nakhon-ratchasima", "evidence": "Khorat", "style": "explicit"}
+{"id": "r38", "query": "Which islands are part of Krabi province?", "doc_id": "krabi", "evidence": "Ko Lanta", "style": "explicit"}
+{"id": "r39", "query": "How far is Vientiane from the town of Nong Khai?", "doc_id": "nong-khai", "evidence": "25 kilometers", "style": "explicit"}
+{"id": "r40", "query": "What is the principal Buddhist monument in Nakhon Si Thammarat?", "doc_id": "nakhon-si-thammarat", "evidence": "Wat Phra Mahathat", "style": "explicit"}
+{"id": "r41", "query": "On which lake is the city of Phayao built?", "doc_id": "phayao", "evidence": "Kwan Phayao", "style": "explicit"}
+{"id": "r42", "query": "Where are the dinosaur beds in Kalasin province?", "doc_id": "kalasin", "evidence": "Phu Kum Khao", "style": "explicit"}
+{"id": "r43", "query": "What is Bangkok called in Thai?", "doc_id": "bangkok", "evidence": "Krung Thep Maha Nakhon", "style": "explicit"}
+{"id": "o01", "query": "What is the capital of Lao Cai province in Vietnam?", "doc_id": null, "evidence": null, "style": "off_corpus"}
+{"id": "o02", "query": "How do I renew a Japanese passport?", "doc_id": null, "evidence": null, "style": "off_corpus"}
+{"id": "o03", "query": "What is the boiling point of liquid nitrogen?", "doc_id": null, "evidence": null, "style": "off_corpus"}
+{"id": "o04", "query": "Who won the 2018 FIFA World Cup?", "doc_id": null, "evidence": null, "style": "off_corpus"}
+{"id": "o05", "query": "Explain how self-attention works in a transformer.", "doc_id": null, "evidence": null, "style": "off_corpus"}
+{"id": "o06", "query": "What is the population of Ontario, Canada?", "doc_id": null, "evidence": null, "style": "off_corpus"}
+{"id": "o07", "query": "Give me a recipe for chocolate chip cookies.", "doc_id": null, "evidence": null, "style": "off_corpus"}
+{"id": "o08", "query": "How many moons does Jupiter have?", "doc_id": null, "evidence": null, "style": "off_corpus"}
+{"id": "o09", "query": "What is the tallest building in Dubai?", "doc_id": null, "evidence": null, "style": "off_corpus"}
+{"id": "o10", "query": "Which river flows through Paris?", "doc_id": null, "evidence": null, "style": "off_corpus"}
+{"id": "o11", "query": "What are the provinces of the Visayas region in the Philippines?", "doc_id": null, "evidence": null, "style": "off_corpus"}
+{"id": "o12", "query": "What is the GDP of the state of Kedah in Malaysia?", "doc_id": null, "evidence": null, "style": "off_corpus"}

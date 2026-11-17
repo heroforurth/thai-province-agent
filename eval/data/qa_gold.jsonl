@@ -1,0 +1,34 @@
+{"id": "t01", "type": "text", "question": "Which province is home to Doi Inthanon, the highest mountain in Thailand?", "answers": ["Chiang Mai"]}
+{"id": "t02", "type": "text", "question": "How high is Doi Inthanon, in metres?", "numeric": 2565, "tol": 0.001}
+{"id": "t03", "type": "text", "question": "What is the largest natural lake in Thailand?", "answers": ["Songkhla"]}
+{"id": "t04", "type": "text", "question": "In which province is the Bridge over the River Kwai?", "answers": ["Kanchanaburi"]}
+{"id": "t05", "type": "text", "question": "What does the name Phitsanulok mean?", "answers": ["Vishnu"]}
+{"id": "t06", "type": "text", "question": "In which year was the First Thai-Lao Friendship Bridge at Nong Khai opened?", "numeric": 1994, "tol": 0}
+{"id": "t07", "type": "text", "question": "Which film made James Bond Island in Phang Nga famous?", "answers": ["Man with the Golden Gun"]}
+{"id": "t08", "type": "text", "question": "Roughly what share of Thailand's elephants are raised in Surin province?", "numeric": 25, "tol": 0, "answers": ["quarter"]}
+{"id": "t09", "type": "text", "question": "In which year was Bueng Kan established as a province?", "numeric": 2011, "tol": 0}
+{"id": "t10", "type": "text", "question": "What was the old name of Lampang?", "answers": ["Khelang"]}
+{"id": "t11", "type": "text", "question": "Which Thai province is nicknamed 'the city of three mists'?", "answers": ["Mae Hong Son"]}
+{"id": "t12", "type": "text", "question": "How large is Kaeng Krachan National Park, in square kilometres?", "numeric": 2915, "tol": 0.005}
+{"id": "t13", "type": "text", "question": "Which province is home to the prehistoric Ban Chiang archaeological site?", "answers": ["Udon Thani"]}
+{"id": "t14", "type": "text", "question": "What did the '101' in Roi Et's old written name originally stand for?", "answers": ["eleven", "11 gates", "11 ancient gates"]}
+{"id": "s01", "type": "sql", "question": "Which province has the largest population after Bangkok?", "answers": ["Nakhon Ratchasima", "Khorat", "Korat"]}
+{"id": "s02", "type": "sql", "question": "What is the registered population of Phuket province?", "numeric": 430000, "tol": 0.01}
+{"id": "s03", "type": "sql", "question": "Which province has the smallest area?", "answers": ["Samut Songkhram"]}
+{"id": "s04", "type": "sql", "question": "How many provinces are in the Northeastern region?", "numeric": 20, "tol": 0}
+{"id": "s05", "type": "sql", "question": "What is the total population of the Southern region?", "numeric": 9521000, "tol": 0.01}
+{"id": "s06", "type": "sql", "question": "Which province in the Northern region has the highest population density?", "answers": ["Chiang Rai"]}
+{"id": "s07", "type": "sql", "question": "What is the area of Nakhon Ratchasima province in square kilometres?", "numeric": 20736, "tol": 0.01}
+{"id": "s08", "type": "sql", "question": "How many provinces have a population of more than one million?", "numeric": 21, "tol": 0}
+{"id": "s09", "type": "sql", "question": "Which province in the Eastern region has the largest population?", "answers": ["Chonburi", "Chon Buri"]}
+{"id": "s10", "type": "sql", "question": "Which province has the lowest population density?", "answers": ["Mae Hong Son"]}
+{"id": "s11", "type": "sql", "question": "What is the average area of the provinces in the Western region, in square kilometres?", "numeric": 10892.6, "tol": 0.01}
+{"id": "m01", "type": "multi", "question": "What is the population of the province where the Bridge over the River Kwai is located?", "numeric": 896000, "tol": 0.01}
+{"id": "m02", "type": "multi", "question": "What is the population density of the province that contains Thailand's largest natural lake?", "numeric": 185, "tol": 0.02}
+{"id": "m03", "type": "multi", "question": "In which region of Thailand is the province with the Ban Chiang archaeological site?", "answers": ["Northeastern", "Northeast", "Isan"]}
+{"id": "m04", "type": "multi", "question": "How many times larger by area is the province containing Doi Inthanon than Phuket province?", "numeric": 40.79, "tol": 0.02}
+{"id": "m05", "type": "multi", "question": "What is the combined population of Krabi and the province that contains James Bond Island?", "numeric": 750000, "tol": 0.01}
+{"id": "m06", "type": "multi", "question": "What is the population of the province that was created most recently, in 2011?", "numeric": 419000, "tol": 0.01}
+{"id": "m07", "type": "multi", "question": "Which region contains the province where the Queen Sirikit Dam is located?", "answers": ["Northern"]}
+{"id": "u01", "type": "unanswerable", "question": "What is the population of Vientiane Prefecture in Laos?", "refuse": true}
+{"id": "u02", "type": "unanswerable", "question": "What is the average monthly salary of a school teacher in Phuket?", "refuse": true}
