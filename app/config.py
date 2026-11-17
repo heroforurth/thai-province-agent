@@ -34,7 +34,10 @@ SQL_DB_PATH = Path(os.environ.get("SQL_DB_PATH", ROOT / "data" / "provinces.db")
 
 # Retrieval knobs. Starting values; eval/eval_retrieval.py measures them against alternatives
 # (see README "Evaluation" and eval/results/): do not change them without re-running it.
-RETRIEVER = os.environ.get("RETRIEVER", "hybrid")  # bm25 | dense | hybrid
+# Default = the configuration the answer evaluation actually measured (BM25; the class
+# proxy's embedding endpoint was down during the eval). hybrid/dense are implemented and
+# unit-tested; enable with RETRIEVER=hybrid once eval/eval_retrieval.py has measured them.
+RETRIEVER = os.environ.get("RETRIEVER", "bm25")  # bm25 | dense | hybrid
 CHUNK_WORDS = _i("CHUNK_WORDS", 120)
 CHUNK_OVERLAP = _i("CHUNK_OVERLAP", 30)
 TOP_K = _i("TOP_K", 5)

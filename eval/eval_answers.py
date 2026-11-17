@@ -79,12 +79,30 @@ def run_system(name: str, gold: list[dict], retriever_mode: str = "hybrid") -> l
     return out
 
 
+def load_audit() -> dict[tuple[str, str], dict]:
+    """Manual overrides found by reading every 'correct' answer by hand (false positives of
+    the string/number matcher). Reported separately: automatic AND audited accuracy."""
+    path = HERE / "data" / "manual_audit.jsonl"
+    if not path.exists():
+        return {}
+    rows = [json.loads(line) for line in open(path, encoding="utf-8") if line.strip()]
+    return {(a["system"], a["id"]): a for a in rows}
+
+
 def summarise(name: str, rows: list[dict], gold: dict[str, dict]) -> dict:
+    audit = load_audit()
     by = defaultdict(list)
+    auto_correct = 0
     for r in rows:
         r["correct"] = score_answer(r["answer"], gold[r["id"]])  # always re-score from text
+        auto_correct += r["correct"]
+        if (name, r["id"]) in audit:
+            r["correct"] = audit[(name, r["id"])]["correct"]
+            r["audit_note"] = audit[(name, r["id"])]["reason"]
         by[r["type"]].append(r["correct"])
     s = {"system": name, "n": len(rows), "accuracy": sum(r["correct"] for r in rows) / len(rows),
+         "auto_accuracy": auto_correct / len(rows),
+         "audit_overrides": [r["id"] for r in rows if "audit_note" in r],
          "by_type": {t: (sum(v) / len(v), len(v)) for t, v in by.items()},
          "median_latency_s": sorted(r["latency_s"] for r in rows)[len(rows) // 2]}
     if name == "agent":
@@ -102,14 +120,17 @@ def summarise(name: str, rows: list[dict], gold: dict[str, dict]) -> dict:
 
 def to_markdown(summaries: list[dict]) -> str:
     lines = ["# Answer evaluation\n", "34 questions: 14 text (articles), 11 sql (statistics table), 7 multi-hop (both), "
-             "2 unanswerable. Metric: deterministic accuracy (see eval/metrics.py). Model temperature 0.\n",
-             "| system | overall | text | sql | multi | unanswerable | median latency (s) |", "|---|---|---|---|---|---|---|"]
+             "2 unanswerable. Metric: deterministic accuracy (see eval/metrics.py), then hand-audited: false positives "
+             "listed in eval/data/manual_audit.jsonl are overridden. Model temperature 0.\n",
+             "| system | audited overall | automatic | text | sql | multi | unanswerable | median latency (s) |",
+             "|---|---|---|---|---|---|---|---|"]
     for s in summaries:
         cells = []
         for t in TYPES:
             acc, n = s["by_type"].get(t, (0.0, 0))
             cells.append(f"{acc:.2f} ({round(acc * n)}/{n})")
         lines.append(f"| {s['system']} | **{s['accuracy']:.3f}** ({round(s['accuracy'] * s['n'])}/{s['n']}) | "
+                     f"{s['auto_accuracy']:.3f} | "
                      + " | ".join(cells) + f" | {s['median_latency_s']} |")
     ag = next((s for s in summaries if s["system"] == "agent"), None)
     if ag:

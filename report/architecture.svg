@@ -59,8 +59,8 @@
 
   <!-- retriever -->
   <rect class="box" x="560" y="250" width="180" height="70"/>
-  <text class="t" x="650" y="273" text-anchor="middle">Hybrid retriever</text>
-  <text class="s" x="650" y="290" text-anchor="middle">BM25 + bge-m3 cosine, RRF</text>
+  <text class="t" x="650" y="273" text-anchor="middle">Retriever</text>
+  <text class="s" x="650" y="290" text-anchor="middle">BM25 (default) or hybrid RRF</text>
   <text class="s" x="650" y="305" text-anchor="middle">min_score floor → refuse</text>
   <path class="e" d="M752,129 C722,180 728,215 712,248"/>
   <line x1="505" y1="292" x2="558" y2="288"/>

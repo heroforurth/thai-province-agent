@@ -17,7 +17,7 @@ numbers instead.
 | # | Family | Where |
 |---|---|---|
 | 1 | **Structured output + schema validation**: every agent turn is JSON validated by a Pydantic discriminated union, with a parse → validate → repair loop | [app/structured.py](app/structured.py), [app/schemas.py](app/schemas.py) |
-| 2 | **RAG with citations**: section-aware chunks, BM25 + bge-m3 hybrid (RRF), `min_score` floor, numbered `[n]` citations checked against what was retrieved | [app/chunking.py](app/chunking.py), [app/retrieval.py](app/retrieval.py), [app/rag.py](app/rag.py) |
+| 2 | **RAG with citations**: section-aware chunks, BM25 (default) or BM25 + bge-m3 hybrid (RRF) with a `min_score` floor, numbered `[n]` citations checked against what was retrieved | [app/chunking.py](app/chunking.py), [app/retrieval.py](app/retrieval.py), [app/rag.py](app/rag.py) |
 | 3 | **Retrieval evaluation**: Recall@k and MRR on 43 labelled queries, BM25-only / dense-only / naive-chunking baselines, chunk-size sweep, ablation, `min_score` chosen on in-corpus vs off-corpus queries | [eval/eval_retrieval.py](eval/eval_retrieval.py), [eval/data/](eval/data/) |
 | 4 | **Agent loop with tools** *(agentic)*: `search_docs`, `run_sql` and `calculator`, with an allow-list, argument validation, and stop conditions (final answer / max steps / repeated call / invalid output) | [app/agent.py](app/agent.py), [app/tools.py](app/tools.py) |
 | 5 | **Text-to-SQL** *(advanced, agentic)*: model-written SQL run on a read-only connection with an authorizer, single-statement SELECT only, a row cap and a step limit | [app/sqldb.py](app/sqldb.py) |
@@ -73,10 +73,10 @@ Without a key the server still starts in **BM25-only mode**: `/api/search` and t
 ## Evaluation (reproducible)
 
 ```bash
-python -m pytest -q                        # 47 tests, no API key needed (fake model + embedder)
+python -m pytest -q                        # 48 tests, no API key needed (fake model + embedder)
 python -m eval.eval_retrieval              # retrieval metrics -> eval/results/retrieval.md
 python -m eval.eval_retrieval --bm25-only  # the part that needs no key (also runs in CI)
-python -m eval.eval_answers                # closed-book vs RAG vs agent -> eval/results/answers.md
+python -m eval.eval_answers --retriever bm25  # closed-book vs RAG vs agent -> eval/results/answers.md
 python -m eval.eval_answers --rescore      # re-score the saved predictions without calling the model
 ```
 
@@ -95,7 +95,33 @@ python -m eval.eval_answers --rescore      # re-score the saved predictions with
 removal) for retrieval. For answers, the baseline is the **closed-book** model (same model, no retrieval, no tools).
 Single-shot RAG is a second baseline for the agent.
 
-Results are in [eval/results/](eval/results/). The headline numbers and their analysis are in the project report.
+### Results
+
+**End-to-end answers** (34 questions, gemma-4-E4B-it, temperature 0, BM25 retrieval for RAG and the agent).
+"Audited" means every answer marked correct was read by hand, and the matcher's false positives were overridden, with the
+reasons recorded in [eval/data/manual_audit.jsonl](eval/data/manual_audit.jsonl):
+
+| System | Audited accuracy | Automatic | Text (14) | SQL (11) | Multi-hop (7) | Unanswerable (2) |
+|---|---|---|---|---|---|---|
+| closed-book (baseline) | 0.294 (10/34) | 0.294 | 4/14 | 2/11 | 2/7 | 2/2 |
+| single-shot RAG | 0.500 (17/34) | 0.529 | 12/14 | 2/11 | 1/7 | 2/2 |
+| **agent** | **0.941 (32/34)** | 0.971 | 12/14 | 11/11 | 7/7 | 2/2 |
+
+Wilson 95% intervals: closed-book 0.17–0.46, RAG 0.34–0.66, agent 0.81–0.98. The agent never cited a source it hadn't
+retrieved, and needed one JSON repair in 34 runs.
+
+**Retrieval** (BM25, 43 labelled queries): the contextual chunk header is the measured improvement. Removing it drops
+Recall@5 from **0.907 to 0.837** (explicit questions: 0.846 → 0.692), and a size of 120 words beats 80/200/300 on
+Recall@5. Honestly reported: naive fixed 200-word chunks have a *higher* MRR (0.868 vs 0.802), while ours are better on
+implicit questions (Recall@5 0.933 vs 0.867). Full tables are in [eval/results/](eval/results/).
+
+> **Note on embeddings.** During the evaluation, the class proxy's embedding endpoint failed every request for over an
+> hour (`401 … column t.tpd_limit does not exist`). The numbers above therefore use BM25, and the default `RETRIEVER=bm25`
+> is what was measured. Hybrid/dense retrieval and the `min_score` sweep are implemented and unit-tested: set
+> `RETRIEVER=hybrid` and run `python -m eval.eval_retrieval` once the endpoint works. The server also falls back to BM25
+> automatically if embedding calls fail.
+
+The full analysis, including failure cases, is in the [project report](report/report.pdf).
 
 ## Design choices (and why)
 
@@ -109,7 +135,7 @@ Results are in [eval/results/](eval/results/). The headline numbers and their an
   province, and a chunk in the middle of an article often doesn't either. The header puts the name back in.
 - **Boilerplate removal.** A near-identical "Human achievement index" paragraph (its table was stripped) appears in
   ~74 articles, so it's detected by normalised-prefix matching and dropped.
-- **`min_score` floor from data, not a guess.** It's picked from the in-corpus vs off-corpus top-cosine sweep in
+- **`min_score` floor from data, not a guess** (hybrid mode). It's picked from the in-corpus vs off-corpus top-cosine sweep in
   `eval_retrieval.py`. Below the floor, `search_docs` returns "no relevant passages" and RAG refuses.
 - **JSON-text tool protocol rather than native function calling.** The proxy ignores `response_format`, and native
   tool support for gemma through it isn't guaranteed. A Pydantic discriminated union over `action` *is* the
@@ -129,7 +155,7 @@ data/raw/   committed corpus: 77 province articles (.md), provinces_table.csv, m
 scripts/    fetch_corpus.py (re-download), ingest.py (build DB + embeddings)
 eval/       labelled data, metrics, retrieval + answer evaluation, saved results
 tests/      unit, agent-loop and API tests (fake model/embedder; run in CI)
-report/     project report source + PDF
+report/     project report (report.pdf), its template and the builder that fills tables from eval/results/
 ```
 
 ## Limitations

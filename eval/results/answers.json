@@ -1,0 +1,92 @@
+[
+  {
+    "system": "closed_book",
+    "n": 34,
+    "accuracy": 0.29411764705882354,
+    "auto_accuracy": 0.29411764705882354,
+    "audit_overrides": [],
+    "by_type": {
+      "text": [
+        0.2857142857142857,
+        14
+      ],
+      "sql": [
+        0.18181818181818182,
+        11
+      ],
+      "multi": [
+        0.2857142857142857,
+        7
+      ],
+      "unanswerable": [
+        1.0,
+        2
+      ]
+    },
+    "median_latency_s": 0.49
+  },
+  {
+    "system": "rag",
+    "n": 34,
+    "accuracy": 0.5,
+    "auto_accuracy": 0.5294117647058824,
+    "audit_overrides": [
+      "s07"
+    ],
+    "by_type": {
+      "text": [
+        0.8571428571428571,
+        14
+      ],
+      "sql": [
+        0.18181818181818182,
+        11
+      ],
+      "multi": [
+        0.14285714285714285,
+        7
+      ],
+      "unanswerable": [
+        1.0,
+        2
+      ]
+    },
+    "median_latency_s": 0.4
+  },
+  {
+    "system": "agent",
+    "n": 34,
+    "accuracy": 0.9411764705882353,
+    "auto_accuracy": 0.9705882352941176,
+    "audit_overrides": [
+      "t12"
+    ],
+    "by_type": {
+      "text": [
+        0.8571428571428571,
+        14
+      ],
+      "sql": [
+        1.0,
+        11
+      ],
+      "multi": [
+        1.0,
+        7
+      ],
+      "unanswerable": [
+        1.0,
+        2
+      ]
+    },
+    "median_latency_s": 2.22,
+    "grounded_rate": 0.96875,
+    "answers_with_invalid_citation": 0,
+    "mean_tool_calls": 1.2941176470588236,
+    "total_json_repairs": 1,
+    "stop_reasons": {
+      "final_answer": 33,
+      "forced:repeated_call": 1
+    }
+  }
+]

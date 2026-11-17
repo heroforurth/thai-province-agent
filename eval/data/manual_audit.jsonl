@@ -1,0 +1,2 @@
+{"system": "agent", "id": "t12", "correct": false, "reason": "False positive of the number matcher: answer states the PROVINCE is 2,915 km2 and the park ~1,457 km2; the park itself is 2,915 km2."}
+{"system": "rag", "id": "s07", "correct": false, "reason": "Hedged: gives two conflicting areas (20,494 and 20,736 km2) without choosing; the matcher accepted the second."}
