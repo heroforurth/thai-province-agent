@@ -5,6 +5,7 @@ Run:  uvicorn app.main:app --port 8000     ->  http://localhost:8000
 """
 from __future__ import annotations
 
+import functools
 import json
 import logging
 import os
@@ -31,11 +32,17 @@ async def lifespan(_: FastAPI):
     ensure_db()  # (re)built from the committed CSV when missing or stale
     if not os.environ.get("OPENAI_API_KEY"):
         log.warning("OPENAI_API_KEY is not set: starting in BM25-only mode; /api/ask will fail")
-        STATE["retriever"] = build_retriever(dense=False)
+        STATE["retriever"] = build_retriever(dense=False, fallback_to_bm25=True)
         STATE["mode"] = "bm25"
     else:
-        STATE["retriever"] = build_retriever(dense=True)  # embeds only chunks not in the cache
-        STATE["mode"] = config.RETRIEVER
+        try:  # embeds only chunks not already in the cache; queries retry briefly, then fall back to BM25
+            STATE["retriever"] = build_retriever(
+                dense=True, embed_fn=functools.partial(llm.embed, attempts=2), fallback_to_bm25=True)
+            STATE["mode"] = config.RETRIEVER
+        except Exception:
+            log.exception("embedding API unavailable at startup: serving with BM25 retrieval")
+            STATE["retriever"] = build_retriever(dense=False, fallback_to_bm25=True)
+            STATE["mode"] = "bm25 (embedding API unavailable)"
     yield
     STATE.clear()
 
@@ -60,9 +67,10 @@ def health() -> dict:
 @app.get("/api/search", response_model=SearchResponse)
 def search(q: str = Query(min_length=2, max_length=300), k: int = Query(config.TOP_K, ge=1, le=10)) -> SearchResponse:
     """Retrieval only (no LLM call for BM25 mode) - handy for debugging the index."""
-    mode = STATE["mode"]
-    res = STATE["retriever"].search(q, k=k, mode=mode, min_score=None if mode == "bm25" else config.MIN_SCORE)
-    return SearchResponse(query=q, retriever=mode, refused=res.refused, sources=rag.sources_from(res))
+    retriever = STATE["retriever"]
+    mode = config.RETRIEVER if retriever.vectors is not None else "bm25"
+    res = retriever.search(q, k=k, mode=mode, min_score=None if mode == "bm25" else config.MIN_SCORE)
+    return SearchResponse(query=q, retriever=res.mode, refused=res.refused, sources=rag.sources_from(res))
 
 
 def _sse(events: Iterator[dict]) -> Iterator[str]:
@@ -84,7 +92,7 @@ def _agent_events(question: str, retriever) -> Iterator[dict]:
 
 @app.post("/api/ask")
 def ask(req: AskRequest) -> StreamingResponse:
-    if STATE.get("mode") == "bm25":
+    if not os.environ.get("OPENAI_API_KEY"):
         raise HTTPException(503, "OPENAI_API_KEY is not configured on the server")
     retriever = STATE["retriever"]
     if req.mode == "rag":

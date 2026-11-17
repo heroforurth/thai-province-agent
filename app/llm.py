@@ -74,13 +74,13 @@ def chat_stream(
             yield chunk.choices[0].delta.content
 
 
-def embed(texts: list[str], *, batch_size: int = 64) -> list[list[float]]:
+def embed(texts: list[str], *, batch_size: int = 64, attempts: int | None = None) -> list[list[float]]:
     """Embed texts with bge-m3. Queries and chunks MUST use the same model.
     Batches are sent concurrently (EMBED_CONCURRENCY) because the proxy is slow per call."""
     batches = [texts[i : i + batch_size] for i in range(0, len(texts), batch_size)]
 
     def one(batch: list[str]) -> list[list[float]]:
-        resp = _with_retry(lambda: client().embeddings.create(model=config.EMBED_MODEL, input=batch))
+        resp = _with_retry(lambda: client().embeddings.create(model=config.EMBED_MODEL, input=batch), attempts)
         return [d.embedding for d in sorted(resp.data, key=lambda d: d.index)]
 
     if len(batches) <= 1:

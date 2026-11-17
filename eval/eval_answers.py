@@ -38,19 +38,23 @@ def load_gold() -> list[dict]:
     return [json.loads(l) for l in open(HERE / "data" / "qa_gold.jsonl", encoding="utf-8")]
 
 
-def run_system(name: str, gold: list[dict]) -> list[dict]:
+def run_system(name: str, gold: list[dict], retriever_mode: str = "hybrid") -> list[dict]:
     from app import agent, llm, rag
     from app.retrieval import build_retriever
     from app.sqldb import connect_readonly
     from app.tools import ToolBox
 
-    retriever = build_retriever(dense=True) if name != "closed_book" else None
+    from app import config
+
+    config.RETRIEVER = retriever_mode  # read at call time by Retriever.search
+    retriever = build_retriever(dense=retriever_mode != "bm25") if name != "closed_book" else None
     if name == "agent":
         toolbox = ToolBox(retriever, connect_readonly())
     out = []
     for item in gold:
         t0 = time.time()
-        row = {"id": item["id"], "type": item["type"], "question": item["question"]}
+        row = {"id": item["id"], "type": item["type"], "question": item["question"],
+               "retriever": None if name == "closed_book" else retriever_mode}
         try:
             if name == "closed_book":
                 row.update(rag.closed_book_answer(item["question"], llm.chat))
@@ -126,6 +130,8 @@ def main() -> int:
     ap.add_argument("--systems", nargs="+", default=list(SYSTEMS), choices=SYSTEMS)
     ap.add_argument("--rescore", action="store_true", help="re-score saved outputs, no API calls")
     ap.add_argument("--limit", type=int, default=None)
+    ap.add_argument("--retriever", default="hybrid", choices=["bm25", "dense", "hybrid"],
+                    help="retriever for rag/agent (bm25 needs no embedding API)")
     args = ap.parse_args()
 
     gold_list = load_gold()[: args.limit]
@@ -134,7 +140,7 @@ def main() -> int:
     if not args.rescore:
         for name in args.systems:
             print(f"running {name} ...")
-            rows = run_system(name, gold_list)
+            rows = run_system(name, gold_list, args.retriever)
             with open(RESULTS / f"answers_{name}.jsonl", "w", encoding="utf-8") as f:
                 for r in rows:
                     f.write(json.dumps(r, ensure_ascii=False) + "\n")

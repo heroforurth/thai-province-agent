@@ -38,7 +38,8 @@ def build_messages(question: str, result: RetrievalResult) -> list[dict]:
 def rag_stream(question: str, retriever: Retriever, stream_fn: Callable[..., Iterator[str]], k: int | None = None) -> Iterator[dict]:
     """Events: sources -> token* -> done (or a refusal when below the min_score floor)."""
     result = retriever.search(question, k=k, min_score=config.MIN_SCORE)
-    yield {"type": "sources", "sources": [s.model_dump() for s in sources_from(result)], "top_cosine": result.top_cosine}
+    yield {"type": "sources", "sources": [s.model_dump() for s in sources_from(result)], "top_cosine": result.top_cosine,
+           "retriever": result.mode}
     if result.refused or not result.hits:
         yield {"type": "token", "text": REFUSAL}
         yield {"type": "done", "refused": True}

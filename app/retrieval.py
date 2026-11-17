@@ -46,8 +46,12 @@ class Retriever:
         *,
         embed_fn: EmbedFn | None = None,
         cache: EmbeddingCache | None = None,
+        fallback_to_bm25: bool = False,
     ):
         self.chunks = chunks
+        # Serving only: if the embedding API fails for a query, degrade to BM25 instead of
+        # failing the request. Kept OFF in evaluation so results never mix retrievers silently.
+        self.fallback_to_bm25 = fallback_to_bm25
         self.bm25 = BM25([c.index_text for c in chunks])
         self.embed_fn = embed_fn
         self.cache = cache
@@ -79,7 +83,14 @@ class Retriever:
             res.hits = [Hit(self.chunks[i], s) for i, s in self._bm25_rank(query)[:k]]
             return res
 
-        cos = self._cosines(query)
+        try:
+            cos = self._cosines(query)
+        except Exception:
+            if not self.fallback_to_bm25:
+                raise
+            res = self.search(query, k=k, mode="bm25")
+            res.mode = "bm25 (embedding API unavailable)"
+            return res
         res.top_cosine = float(cos.max()) if len(cos) else None
         if min_score is not None and (res.top_cosine is None or res.top_cosine < min_score):
             res.refused = True
@@ -102,7 +113,9 @@ class Retriever:
         return res
 
 
-def build_retriever(*, dense: bool = True, embed_fn: EmbedFn | None = None, **chunk_kwargs) -> Retriever:
+def build_retriever(
+    *, dense: bool = True, embed_fn: EmbedFn | None = None, fallback_to_bm25: bool = False, **chunk_kwargs
+) -> Retriever:
     """Chunk the corpus with the configured settings and build the retriever."""
     opts = {"size": config.CHUNK_WORDS, "overlap": config.CHUNK_OVERLAP, **chunk_kwargs}
     chunks = chunk_docs(load_docs(config.DOCS_DIR), **opts)
@@ -110,4 +123,4 @@ def build_retriever(*, dense: bool = True, embed_fn: EmbedFn | None = None, **ch
         from app import llm
 
         embed_fn = llm.embed
-    return Retriever(chunks, embed_fn=embed_fn if dense else None)
+    return Retriever(chunks, embed_fn=embed_fn if dense else None, fallback_to_bm25=fallback_to_bm25)

@@ -67,7 +67,7 @@ function handle(ev) {
     case "sources":
       ragSources = ev.sources;
       renderSources(ev.sources);
-      addTrace(`<span class="tool">retrieve</span> ${ev.sources.length} chunks · top cosine ${ev.top_cosine?.toFixed(3) ?? "—"}`);
+      addTrace(`<span class="tool">retrieve</span> ${esc(ev.retriever)} · ${ev.sources.length} chunks · top cosine ${ev.top_cosine?.toFixed(3) ?? "—"}`);
       break;
     case "token":
       ragText += ev.text;

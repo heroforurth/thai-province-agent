@@ -163,3 +163,20 @@ def test_api_rag_stream(client):
 def test_api_validates_input(client):
     assert client.post("/api/ask", json={"question": "x", "mode": "agent"}).status_code == 422
     assert client.post("/api/ask", json={"question": "hello there", "mode": "shell"}).status_code == 422
+
+
+def test_serving_falls_back_to_bm25_when_embedding_api_fails(chunks, tmp_cache):
+    api = {"up": True}
+
+    def flaky_embed(texts):
+        if not api["up"]:
+            raise ConnectionError("proxy down")
+        return fake_embed(texts)
+
+    r = Retriever(chunks, embed_fn=flaky_embed, fallback_to_bm25=True)  # chunks embed while the API is up
+    strict = Retriever(chunks, embed_fn=flaky_embed)
+    api["up"] = False  # ...then the proxy goes down before the queries arrive
+    res = r.search("Doi Inthanon", k=3, mode="hybrid")
+    assert res.mode.startswith("bm25") and res.hits[0].chunk.doc_id == "chiang-mai"
+    with pytest.raises(ConnectionError):
+        strict.search("another query", mode="hybrid")
