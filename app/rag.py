@@ -35,7 +35,7 @@ def build_messages(question: str, result: RetrievalResult) -> list[dict]:
     ]
 
 
-def rag_stream(question: str, retriever: Retriever, stream_fn: Callable[..., Iterator[str]], k: int = config.TOP_K) -> Iterator[dict]:
+def rag_stream(question: str, retriever: Retriever, stream_fn: Callable[..., Iterator[str]], k: int | None = None) -> Iterator[dict]:
     """Events: sources -> token* -> done (or a refusal when below the min_score floor)."""
     result = retriever.search(question, k=k, min_score=config.MIN_SCORE)
     yield {"type": "sources", "sources": [s.model_dump() for s in sources_from(result)], "top_cosine": result.top_cosine}
@@ -48,7 +48,7 @@ def rag_stream(question: str, retriever: Retriever, stream_fn: Callable[..., Ite
     yield {"type": "done", "refused": False}
 
 
-def rag_answer(question: str, retriever: Retriever, chat_fn: Callable[[list[dict]], str], k: int = config.TOP_K) -> dict:
+def rag_answer(question: str, retriever: Retriever, chat_fn: Callable[[list[dict]], str], k: int | None = None) -> dict:
     result = retriever.search(question, k=k, min_score=config.MIN_SCORE)
     if result.refused or not result.hits:
         return {"answer": REFUSAL, "refused": True, "sources": []}

@@ -5,6 +5,7 @@
 
     python scripts/ingest.py
 """
+import logging
 import os
 import sys
 import time
@@ -18,6 +19,8 @@ from app.sqldb import build_db  # noqa: E402  (always rebuild here)
 
 
 def main() -> int:
+    logging.basicConfig(level=logging.INFO, format="%(asctime)s %(message)s", datefmt="%H:%M:%S")
+    logging.getLogger("httpx").setLevel(logging.WARNING)
     path = build_db()
     print(f"SQL table -> {path}")
     if not os.environ.get("OPENAI_API_KEY"):

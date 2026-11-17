@@ -10,6 +10,7 @@ Embeddings are cached (data/cache/), so re-runs are fast and give identical numb
 from __future__ import annotations
 
 import argparse
+import logging
 import json
 import os
 import sys
@@ -91,6 +92,8 @@ HEADER = ("| config | R@1 | R@3 | R@5 | MRR@10 | doc R@5 | R@5 implicit | R@5 ex
 
 def main() -> int:
     sys.stdout.reconfigure(encoding="utf-8")
+    logging.basicConfig(level=logging.INFO, format="%(asctime)s %(message)s", datefmt="%H:%M:%S")
+    logging.getLogger("httpx").setLevel(logging.WARNING)
     ap = argparse.ArgumentParser()
     ap.add_argument("--bm25-only", action="store_true", help="skip dense/hybrid (no API key needed)")
     args = ap.parse_args()
@@ -128,7 +131,7 @@ def main() -> int:
     best_mode = "hybrid" if dense else "bm25"
     # 2) Chunk-size sweep (our strategy, best retriever)
     md += [f"\n## 2. Chunk size sweep ({best_mode}, section + header, overlap = size/4)\n", HEADER]
-    for size in (60, 120, 200, 300):
+    for size in (80, 120, 200, 300):
         opts = {**OURS, "size": size, "overlap": size // 4}
         md.append(f"| {best_mode} / size {size} " + fmt(run(f"{best_mode}|size{size}", opts, best_mode)))
 

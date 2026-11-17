@@ -43,16 +43,18 @@ class EmbeddingCache:
                     found[k] = np.frombuffer(blob, dtype=np.float32)
         missing = [(k, t) for k, t in zip(keys, texts) if k not in found]
         if missing:
-            uniq = dict(missing)  # dedupe identical texts
-            vecs = embed_fn(list(uniq.values()))
-            rows = []
-            for k, v in zip(uniq.keys(), vecs):
-                arr = np.asarray(v, dtype=np.float32)
-                found[k] = arr
-                rows.append((k, arr.tobytes()))
-            with self._lock:
-                self.db.executemany("INSERT OR REPLACE INTO emb VALUES(?, ?)", rows)
-                self.db.commit()
+            uniq = list(dict(missing).items())  # dedupe identical texts
+            for start in range(0, len(uniq), 256):  # persist batch by batch: a crash keeps progress
+                part = uniq[start : start + 256]
+                vecs = embed_fn([t for _, t in part])
+                rows = []
+                for (k, _), v in zip(part, vecs):
+                    arr = np.asarray(v, dtype=np.float32)
+                    found[k] = arr
+                    rows.append((k, arr.tobytes()))
+                with self._lock:
+                    self.db.executemany("INSERT OR REPLACE INTO emb VALUES(?, ?)", rows)
+                    self.db.commit()
         mat = np.stack([found[k] for k in keys]) if keys else np.zeros((0, 1), np.float32)
         norms = np.linalg.norm(mat, axis=1, keepdims=True)
         return mat / np.where(norms == 0, 1, norms)

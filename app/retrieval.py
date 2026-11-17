@@ -70,8 +70,10 @@ class Retriever:
 
     # ------------------------------------------------------------------ public
     def search(
-        self, query: str, k: int = config.TOP_K, mode: str = config.RETRIEVER, min_score: float | None = None
+        self, query: str, k: int | None = None, mode: str | None = None, min_score: float | None = None
     ) -> RetrievalResult:
+        k = k or config.TOP_K  # resolved at call time so config/env overrides apply
+        mode = mode or config.RETRIEVER
         res = RetrievalResult(query=query, mode=mode)
         if mode == "bm25":
             res.hits = [Hit(self.chunks[i], s) for i, s in self._bm25_rank(query)[:k]]

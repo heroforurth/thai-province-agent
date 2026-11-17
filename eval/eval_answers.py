@@ -19,6 +19,7 @@ re-scored and audited without calling the model again.
 from __future__ import annotations
 
 import argparse
+import logging
 import json
 import sys
 import time
@@ -119,6 +120,8 @@ def to_markdown(summaries: list[dict]) -> str:
 
 def main() -> int:
     sys.stdout.reconfigure(encoding="utf-8")
+    logging.basicConfig(level=logging.INFO, format="%(asctime)s %(message)s", datefmt="%H:%M:%S")
+    logging.getLogger("httpx").setLevel(logging.WARNING)
     ap = argparse.ArgumentParser()
     ap.add_argument("--systems", nargs="+", default=list(SYSTEMS), choices=SYSTEMS)
     ap.add_argument("--rescore", action="store_true", help="re-score saved outputs, no API calls")
