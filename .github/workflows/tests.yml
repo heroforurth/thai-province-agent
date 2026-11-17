@@ -1,0 +1,14 @@
+name: tests
+on: [push, pull_request]
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: pip install -r requirements.txt
+      # No API key in CI: the model and embedder are replaced by fakes in tests/.
+      - run: python -m pytest -q
+      - run: python -m eval.eval_retrieval --bm25-only
