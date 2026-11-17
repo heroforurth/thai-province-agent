@@ -1,0 +1,50 @@
+:root {
+  color-scheme: dark;
+  --bg: #111a24; --panel: #18232e; --raised: #1d2a36; --line: #2a3845;
+  --muted: #91a0ad; --text: #edf2f2; --teal: #69d7c0; --amber: #f3bd6a; --red: #f18478;
+  --mono: "Cascadia Code", Consolas, monospace; --sans: "Segoe UI", system-ui, Arial, sans-serif;
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--text); font: 15px/1.55 var(--sans); }
+.wrap { max-width: 1180px; margin: 0 auto; padding: 24px 16px 32px; }
+.top { display: flex; gap: 16px; justify-content: space-between; align-items: flex-start; }
+h1 { margin: 0 0 4px; font-size: 26px; letter-spacing: -0.5px; }
+h2 { margin: 0 0 10px; font-size: 13px; color: var(--teal); font-family: var(--mono); letter-spacing: 1px; text-transform: uppercase; }
+h3 { margin: 18px 0 8px; font-size: 12px; color: var(--muted); font-family: var(--mono); text-transform: uppercase; }
+.sub { margin: 0; color: var(--muted); max-width: 720px; }
+.status { font: 11px var(--mono); color: var(--muted); border: 1px solid var(--line); border-radius: 999px; padding: 4px 10px; white-space: nowrap; }
+.status.ok { color: var(--teal); border-color: #2f5a52; }
+.status.bad { color: var(--red); border-color: #6b3a35; }
+.ask { margin-top: 20px; display: grid; gap: 10px; }
+#question { width: 100%; padding: 14px 16px; border-radius: 10px; border: 1px solid var(--line); background: var(--panel); color: var(--text); font: inherit; }
+#question:focus { outline: 2px solid var(--teal); outline-offset: 1px; }
+.controls { display: flex; gap: 10px; justify-content: space-between; flex-wrap: wrap; }
+.seg { display: inline-flex; border: 1px solid var(--line); border-radius: 8px; overflow: hidden; }
+.seg label { padding: 7px 12px; cursor: pointer; color: var(--muted); font-size: 13px; }
+.seg input { margin-right: 6px; accent-color: var(--teal); }
+.seg label:has(input:checked) { background: var(--raised); color: var(--text); }
+button { padding: 8px 22px; border: 0; border-radius: 8px; background: var(--teal); color: #0d2420; font: 600 14px var(--sans); cursor: pointer; }
+button:disabled { opacity: .5; cursor: wait; }
+.examples { display: flex; flex-wrap: wrap; gap: 8px; margin: 14px 0 18px; }
+.chip { background: var(--panel); border: 1px solid var(--line); color: var(--muted); border-radius: 999px; padding: 5px 12px; font-size: 12px; cursor: pointer; }
+.chip:hover { color: var(--text); border-color: var(--teal); }
+.grid { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr); gap: 16px; }
+@media (max-width: 860px) { .grid { grid-template-columns: 1fr; } .top { flex-direction: column; } }
+.panel { background: var(--panel); border: 1px solid var(--line); border-radius: 12px; padding: 16px; min-width: 0; }
+.answer { font-size: 16px; white-space: pre-wrap; min-height: 48px; }
+.muted { color: var(--muted); }
+.cite { display: inline-block; padding: 0 5px; margin: 0 1px; border-radius: 4px; background: #203239; color: var(--teal); font: 12px var(--mono); text-decoration: none; }
+.meta { margin-top: 10px; font: 11px var(--mono); color: var(--muted); display: flex; gap: 12px; flex-wrap: wrap; }
+.meta .warn { color: var(--amber); }
+.sources { margin: 0; padding-left: 22px; display: grid; gap: 8px; }
+.sources li { font-size: 13px; color: var(--muted); }
+.sources a { color: var(--text); }
+.sources .snip { display: block; font-size: 12px; margin-top: 2px; overflow-wrap: anywhere; }
+.trace { margin: 0; padding-left: 20px; display: grid; gap: 10px; font-size: 13px; }
+.trace .tool { font: 12px var(--mono); color: var(--amber); }
+.trace .thought { color: var(--muted); font-style: italic; }
+.trace pre { margin: 6px 0 0; padding: 8px; background: var(--bg); border-radius: 6px; overflow-x: auto; font: 12px var(--mono); white-space: pre-wrap; overflow-wrap: anywhere; }
+.trace .err { color: var(--red); }
+table.sql { border-collapse: collapse; margin-top: 6px; font: 12px var(--mono); display: block; overflow-x: auto; }
+table.sql th, table.sql td { border: 1px solid var(--line); padding: 3px 8px; text-align: left; }
+.foot { margin-top: 22px; color: #64737d; font: 11px var(--mono); }

@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Thai Province Agent</title>
+  <link rel="stylesheet" href="/static/styles.css">
+  <script src="/static/app.js" defer></script>
+</head>
+<body>
+  <main class="wrap">
+    <header class="top">
+      <div>
+        <h1>Thai Province Agent</h1>
+        <p class="sub">Ask about any of Thailand's 77 provinces. Answers come from Wikipedia articles (cited) and a statistics table (SQL) — not from the model's memory.</p>
+      </div>
+      <div class="status" id="status">connecting…</div>
+    </header>
+
+    <form id="ask-form" class="ask" autocomplete="off">
+      <input id="question" name="question" maxlength="500" placeholder="e.g. What is the population density of the province with Thailand's largest natural lake?" required>
+      <div class="controls">
+        <div class="seg" role="radiogroup" aria-label="Mode">
+          <label><input type="radio" name="mode" value="agent" checked> Agent (tools)</label>
+          <label><input type="radio" name="mode" value="rag"> Quick RAG</label>
+        </div>
+        <button type="submit" id="go">Ask</button>
+      </div>
+    </form>
+
+    <div class="examples" id="examples"></div>
+
+    <section class="grid">
+      <div class="panel">
+        <h2>Answer</h2>
+        <div id="answer" class="answer muted">Your answer will appear here.</div>
+        <div id="meta" class="meta"></div>
+        <h3>Sources</h3>
+        <ol id="sources" class="sources"></ol>
+      </div>
+      <div class="panel">
+        <h2>Agent trace</h2>
+        <ol id="trace" class="trace"><li class="muted">Tool calls and their results stream here.</li></ol>
+      </div>
+    </section>
+    <footer class="foot">Data: Wikipedia (CC BY-SA 4.0) · Model: gemma-4-E4B-it via the class proxy · Embeddings: bge-m3</footer>
+  </main>
+</body>
+</html>
