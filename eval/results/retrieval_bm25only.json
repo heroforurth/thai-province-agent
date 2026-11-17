@@ -2,7 +2,334 @@
   "n_in_corpus": 43,
   "n_off_corpus": 12,
   "experiments": {
+    "bm25|section-120+header": {
+      "group": "main",
+      "chunking": {
+        "strategy": "section",
+        "size": 120,
+        "overlap": 30,
+        "header": true,
+        "drop_boilerplate": true
+      },
+      "mode": "bm25",
+      "chunks": 1851,
+      "metrics": {
+        "recall@1": 0.7209302325581395,
+        "recall@3": 0.8837209302325582,
+        "recall@5": 0.9069767441860465,
+        "mrr@10": 0.8018087855297157,
+        "doc_recall@5": 0.9767441860465116,
+        "n": 43,
+        "unreachable": 0,
+        "recall@5_implicit": 0.9333333333333333,
+        "recall@5_explicit": 0.8461538461538461
+      },
+      "per_query": [
+        {
+          "id": "r01",
+          "style": "implicit",
+          "rank": 1,
+          "doc_rank": 1,
+          "top1": "kanchanaburi#0"
+        },
+        {
+          "id": "r02",
+          "style": "implicit",
+          "rank": 1,
+          "doc_rank": 1,
+          "top1": "udon-thani#5"
+        },
+        {
+          "id": "r03",
+          "style": "implicit",
+          "rank": 1,
+          "doc_rank": 1,
+          "top1": "phang-nga#3"
+        },
+        {
+          "id": "r04",
+          "style": "implicit",
+          "rank": 3,
+          "doc_rank": 3,
+          "top1": "phetchabun#13"
+        },
+        {
+          "id": "r05",
+          "style": "implicit",
+          "rank": null,
+          "doc_rank": null,
+          "top1": "chaiyaphum#2"
+        },
+        {
+          "id": "r06",
+          "style": "implicit",
+          "rank": 1,
+          "doc_rank": 1,
+          "top1": "songkhla#0"
+        },
+        {
+          "id": "r07",
+          "style": "implicit",
+          "rank": 1,
+          "doc_rank": 1,
+          "top1": "lopburi#17"
+        },
+        {
+          "id": "r08",
+          "style": "implicit",
+          "rank": 2,
+          "doc_rank": 2,
+          "top1": "trat#13"
+        },
+        {
+          "id": "r09",
+          "style": "implicit",
+          "rank": 1,
+          "doc_rank": 1,
+          "top1": "buriram#5"
+        },
+        {
+          "id": "r10",
+          "style": "implicit",
+          "rank": 2,
+          "doc_rank": 1,
+          "top1": "surin#20"
+        },
+        {
+          "id": "r11",
+          "style": "implicit",
+          "rank": 1,
+          "doc_rank": 1,
+          "top1": "phuket#16"
+        },
+        {
+          "id": "r12",
+          "style": "implicit",
+          "rank": 1,
+          "doc_rank": 1,
+          "top1": "ranong#0"
+        },
+        {
+          "id": "r13",
+          "style": "implicit",
+          "rank": 1,
+          "doc_rank": 1,
+          "top1": "yala#0"
+        },
+        {
+          "id": "r14",
+          "style": "implicit",
+          "rank": 5,
+          "doc_rank": 3,
+          "top1": "satun#12"
+        },
+        {
+          "id": "r15",
+          "style": "implicit",
+          "rank": 1,
+          "doc_rank": 1,
+          "top1": "surat-thani#5"
+        },
+        {
+          "id": "r16",
+          "style": "implicit",
+          "rank": 1,
+          "doc_rank": 1,
+          "top1": "uttaradit#12"
+        },
+        {
+          "id": "r17",
+          "style": "implicit",
+          "rank": 1,
+          "doc_rank": 1,
+          "top1": "tak#1"
+        },
+        {
+          "id": "r18",
+          "style": "implicit",
+          "rank": 2,
+          "doc_rank": 1,
+          "top1": "mae-hong-son#22"
+        },
+        {
+          "id": "r19",
+          "style": "implicit",
+          "rank": 9,
+          "doc_rank": 4,
+          "top1": "suphan-buri#21"
+        },
+        {
+          "id": "r20",
+          "style": "implicit",
+          "rank": 1,
+          "doc_rank": 1,
+          "top1": "chonburi#0"
+        },
+        {
+          "id": "r21",
+          "style": "implicit",
+          "rank": 3,
+          "doc_rank": 2,
+          "top1": "bueng-kan#8"
+        },
+        {
+          "id": "r22",
+          "style": "implicit",
+          "rank": 1,
+          "doc_rank": 1,
+          "top1": "phra-nakhon-si-ayutthaya#6"
+        },
+        {
+          "id": "r23",
+          "style": "implicit",
+          "rank": 1,
+          "doc_rank": 1,
+          "top1": "uthai-thani#2"
+        },
+        {
+          "id": "r24",
+          "style": "implicit",
+          "rank": 1,
+          "doc_rank": 1,
+          "top1": "sakon-nakhon#2"
+        },
+        {
+          "id": "r25",
+          "style": "implicit",
+          "rank": 1,
+          "doc_rank": 1,
+          "top1": "saraburi#12"
+        },
+        {
+          "id": "r26",
+          "style": "implicit",
+          "rank": 1,
+          "doc_rank": 1,
+          "top1": "lamphun#0"
+        },
+        {
+          "id": "r27",
+          "style": "implicit",
+          "rank": 1,
+          "doc_rank": 1,
+          "top1": "chaiyaphum#2"
+        },
+        {
+          "id": "r28",
+          "style": "implicit",
+          "rank": 1,
+          "doc_rank": 1,
+          "top1": "sing-buri#0"
+        },
+        {
+          "id": "r29",
+          "style": "implicit",
+          "rank": 1,
+          "doc_rank": 1,
+          "top1": "prachuap-khiri-khan#7"
+        },
+        {
+          "id": "r30",
+          "style": "implicit",
+          "rank": 1,
+          "doc_rank": 1,
+          "top1": "trat#9"
+        },
+        {
+          "id": "r31",
+          "style": "explicit",
+          "rank": 2,
+          "doc_rank": 2,
+          "top1": "roi-et#1"
+        },
+        {
+          "id": "r32",
+          "style": "explicit",
+          "rank": 1,
+          "doc_rank": 1,
+          "top1": "ang-thong#0"
+        },
+        {
+          "id": "r33",
+          "style": "explicit",
+          "rank": 1,
+          "doc_rank": 1,
+          "top1": "lampang#0"
+        },
+        {
+          "id": "r34",
+          "style": "explicit",
+          "rank": 1,
+          "doc_rank": 1,
+          "top1": "surat-thani#0"
+        },
+        {
+          "id": "r35",
+          "style": "explicit",
+          "rank": 1,
+          "doc_rank": 1,
+          "top1": "roi-et#1"
+        },
+        {
+          "id": "r36",
+          "style": "explicit",
+          "rank": 1,
+          "doc_rank": 1,
+          "top1": "chiang-mai#2"
+        },
+        {
+          "id": "r37",
+          "style": "explicit",
+          "rank": null,
+          "doc_rank": 2,
+          "top1": "phang-nga#2"
+        },
+        {
+          "id": "r38",
+          "style": "explicit",
+          "rank": 1,
+          "doc_rank": 1,
+          "top1": "krabi#1"
+        },
+        {
+          "id": "r39",
+          "style": "explicit",
+          "rank": 2,
+          "doc_rank": 2,
+          "top1": "udon-thani#18"
+        },
+        {
+          "id": "r40",
+          "style": "explicit",
+          "rank": 1,
+          "doc_rank": 1,
+          "top1": "nakhon-si-thammarat#1"
+        },
+        {
+          "id": "r41",
+          "style": "explicit",
+          "rank": 1,
+          "doc_rank": 1,
+          "top1": "phayao#1"
+        },
+        {
+          "id": "r42",
+          "style": "explicit",
+          "rank": 1,
+          "doc_rank": 1,
+          "top1": "kalasin#0"
+        },
+        {
+          "id": "r43",
+          "style": "explicit",
+          "rank": null,
+          "doc_rank": 1,
+          "top1": "bangkok#11"
+        }
+      ]
+    },
     "bm25|naive fixed-200": {
+      "group": "main",
       "chunking": {
         "strategy": "fixed",
         "size": 200,
@@ -327,21 +654,22 @@
         }
       ]
     },
-    "bm25|section-120+header": {
+    "bm25|keep boilerplate": {
+      "group": "ablation",
       "chunking": {
         "strategy": "section",
         "size": 120,
         "overlap": 30,
         "header": true,
-        "drop_boilerplate": true
+        "drop_boilerplate": false
       },
       "mode": "bm25",
-      "chunks": 1851,
+      "chunks": 1932,
       "metrics": {
         "recall@1": 0.7209302325581395,
         "recall@3": 0.8837209302325582,
         "recall@5": 0.9069767441860465,
-        "mrr@10": 0.8018087855297157,
+        "mrr@10": 0.7979328165374677,
         "doc_recall@5": 0.9767441860465116,
         "n": 43,
         "unreachable": 0,
@@ -562,658 +890,8 @@
         {
           "id": "r31",
           "style": "explicit",
-          "rank": 2,
-          "doc_rank": 2,
-          "top1": "roi-et#1"
-        },
-        {
-          "id": "r32",
-          "style": "explicit",
-          "rank": 1,
-          "doc_rank": 1,
-          "top1": "ang-thong#0"
-        },
-        {
-          "id": "r33",
-          "style": "explicit",
-          "rank": 1,
-          "doc_rank": 1,
-          "top1": "lampang#0"
-        },
-        {
-          "id": "r34",
-          "style": "explicit",
-          "rank": 1,
-          "doc_rank": 1,
-          "top1": "surat-thani#0"
-        },
-        {
-          "id": "r35",
-          "style": "explicit",
-          "rank": 1,
-          "doc_rank": 1,
-          "top1": "roi-et#1"
-        },
-        {
-          "id": "r36",
-          "style": "explicit",
-          "rank": 1,
-          "doc_rank": 1,
-          "top1": "chiang-mai#2"
-        },
-        {
-          "id": "r37",
-          "style": "explicit",
-          "rank": null,
-          "doc_rank": 2,
-          "top1": "phang-nga#2"
-        },
-        {
-          "id": "r38",
-          "style": "explicit",
-          "rank": 1,
-          "doc_rank": 1,
-          "top1": "krabi#1"
-        },
-        {
-          "id": "r39",
-          "style": "explicit",
-          "rank": 2,
-          "doc_rank": 2,
-          "top1": "udon-thani#18"
-        },
-        {
-          "id": "r40",
-          "style": "explicit",
-          "rank": 1,
-          "doc_rank": 1,
-          "top1": "nakhon-si-thammarat#1"
-        },
-        {
-          "id": "r41",
-          "style": "explicit",
-          "rank": 1,
-          "doc_rank": 1,
-          "top1": "phayao#1"
-        },
-        {
-          "id": "r42",
-          "style": "explicit",
-          "rank": 1,
-          "doc_rank": 1,
-          "top1": "kalasin#0"
-        },
-        {
-          "id": "r43",
-          "style": "explicit",
-          "rank": null,
-          "doc_rank": 1,
-          "top1": "bangkok#11"
-        }
-      ]
-    },
-    "bm25|size60": {
-      "chunking": {
-        "strategy": "section",
-        "size": 60,
-        "overlap": 15,
-        "header": true,
-        "drop_boilerplate": true
-      },
-      "mode": "bm25",
-      "chunks": 3025,
-      "metrics": {
-        "recall@1": 0.6976744186046512,
-        "recall@3": 0.8372093023255814,
-        "recall@5": 0.8837209302325582,
-        "mrr@10": 0.7723145071982281,
-        "doc_recall@5": 0.9302325581395349,
-        "n": 43,
-        "unreachable": 0,
-        "recall@5_implicit": 0.9333333333333333,
-        "recall@5_explicit": 0.7692307692307693
-      },
-      "per_query": [
-        {
-          "id": "r01",
-          "style": "implicit",
-          "rank": 1,
-          "doc_rank": 1,
-          "top1": "kanchanaburi#0"
-        },
-        {
-          "id": "r02",
-          "style": "implicit",
-          "rank": 1,
-          "doc_rank": 1,
-          "top1": "udon-thani#11"
-        },
-        {
-          "id": "r03",
-          "style": "implicit",
-          "rank": 1,
-          "doc_rank": 1,
-          "top1": "phang-nga#6"
-        },
-        {
-          "id": "r04",
-          "style": "implicit",
           "rank": 3,
           "doc_rank": 3,
-          "top1": "phetchabun#23"
-        },
-        {
-          "id": "r05",
-          "style": "implicit",
-          "rank": null,
-          "doc_rank": null,
-          "top1": "chaiyaphum#3"
-        },
-        {
-          "id": "r06",
-          "style": "implicit",
-          "rank": 1,
-          "doc_rank": 1,
-          "top1": "songkhla#29"
-        },
-        {
-          "id": "r07",
-          "style": "implicit",
-          "rank": 1,
-          "doc_rank": 1,
-          "top1": "lopburi#26"
-        },
-        {
-          "id": "r08",
-          "style": "implicit",
-          "rank": 2,
-          "doc_rank": 2,
-          "top1": "trat#23"
-        },
-        {
-          "id": "r09",
-          "style": "implicit",
-          "rank": 1,
-          "doc_rank": 1,
-          "top1": "buriram#9"
-        },
-        {
-          "id": "r10",
-          "style": "implicit",
-          "rank": 5,
-          "doc_rank": 1,
-          "top1": "surin#36"
-        },
-        {
-          "id": "r11",
-          "style": "implicit",
-          "rank": 1,
-          "doc_rank": 1,
-          "top1": "phuket#31"
-        },
-        {
-          "id": "r12",
-          "style": "implicit",
-          "rank": 1,
-          "doc_rank": 1,
-          "top1": "ranong#0"
-        },
-        {
-          "id": "r13",
-          "style": "implicit",
-          "rank": 1,
-          "doc_rank": 1,
-          "top1": "yala#0"
-        },
-        {
-          "id": "r14",
-          "style": "implicit",
-          "rank": 7,
-          "doc_rank": 7,
-          "top1": "phuket#5"
-        },
-        {
-          "id": "r15",
-          "style": "implicit",
-          "rank": 1,
-          "doc_rank": 1,
-          "top1": "surat-thani#11"
-        },
-        {
-          "id": "r16",
-          "style": "implicit",
-          "rank": 1,
-          "doc_rank": 1,
-          "top1": "uttaradit#24"
-        },
-        {
-          "id": "r17",
-          "style": "implicit",
-          "rank": 1,
-          "doc_rank": 1,
-          "top1": "tak#1"
-        },
-        {
-          "id": "r18",
-          "style": "implicit",
-          "rank": 1,
-          "doc_rank": 1,
-          "top1": "mae-hong-son#1"
-        },
-        {
-          "id": "r19",
-          "style": "implicit",
-          "rank": 5,
-          "doc_rank": 4,
-          "top1": "suphan-buri#37"
-        },
-        {
-          "id": "r20",
-          "style": "implicit",
-          "rank": 1,
-          "doc_rank": 1,
-          "top1": "chonburi#1"
-        },
-        {
-          "id": "r21",
-          "style": "implicit",
-          "rank": 2,
-          "doc_rank": 2,
-          "top1": "bueng-kan#14"
-        },
-        {
-          "id": "r22",
-          "style": "implicit",
-          "rank": 1,
-          "doc_rank": 1,
-          "top1": "phra-nakhon-si-ayutthaya#9"
-        },
-        {
-          "id": "r23",
-          "style": "implicit",
-          "rank": 1,
-          "doc_rank": 1,
-          "top1": "uthai-thani#3"
-        },
-        {
-          "id": "r24",
-          "style": "implicit",
-          "rank": 1,
-          "doc_rank": 1,
-          "top1": "sakon-nakhon#2"
-        },
-        {
-          "id": "r25",
-          "style": "implicit",
-          "rank": 1,
-          "doc_rank": 1,
-          "top1": "saraburi#19"
-        },
-        {
-          "id": "r26",
-          "style": "implicit",
-          "rank": 1,
-          "doc_rank": 1,
-          "top1": "lamphun#1"
-        },
-        {
-          "id": "r27",
-          "style": "implicit",
-          "rank": 1,
-          "doc_rank": 1,
-          "top1": "chaiyaphum#3"
-        },
-        {
-          "id": "r28",
-          "style": "implicit",
-          "rank": 1,
-          "doc_rank": 1,
-          "top1": "sing-buri#1"
-        },
-        {
-          "id": "r29",
-          "style": "implicit",
-          "rank": 2,
-          "doc_rank": 1,
-          "top1": "prachuap-khiri-khan#13"
-        },
-        {
-          "id": "r30",
-          "style": "implicit",
-          "rank": 1,
-          "doc_rank": 1,
-          "top1": "trat#18"
-        },
-        {
-          "id": "r31",
-          "style": "explicit",
-          "rank": null,
-          "doc_rank": 3,
-          "top1": "roi-et#2"
-        },
-        {
-          "id": "r32",
-          "style": "explicit",
-          "rank": 1,
-          "doc_rank": 1,
-          "top1": "ang-thong#0"
-        },
-        {
-          "id": "r33",
-          "style": "explicit",
-          "rank": 1,
-          "doc_rank": 1,
-          "top1": "lampang#0"
-        },
-        {
-          "id": "r34",
-          "style": "explicit",
-          "rank": 1,
-          "doc_rank": 1,
-          "top1": "surat-thani#0"
-        },
-        {
-          "id": "r35",
-          "style": "explicit",
-          "rank": 2,
-          "doc_rank": 1,
-          "top1": "roi-et#2"
-        },
-        {
-          "id": "r36",
-          "style": "explicit",
-          "rank": null,
-          "doc_rank": 1,
-          "top1": "chiang-mai#4"
-        },
-        {
-          "id": "r37",
-          "style": "explicit",
-          "rank": 1,
-          "doc_rank": 1,
-          "top1": "nakhon-ratchasima#2"
-        },
-        {
-          "id": "r38",
-          "style": "explicit",
-          "rank": 1,
-          "doc_rank": 1,
-          "top1": "krabi#4"
-        },
-        {
-          "id": "r39",
-          "style": "explicit",
-          "rank": 3,
-          "doc_rank": 2,
-          "top1": "udon-thani#32"
-        },
-        {
-          "id": "r40",
-          "style": "explicit",
-          "rank": 1,
-          "doc_rank": 1,
-          "top1": "nakhon-si-thammarat#2"
-        },
-        {
-          "id": "r41",
-          "style": "explicit",
-          "rank": 1,
-          "doc_rank": 1,
-          "top1": "phayao#12"
-        },
-        {
-          "id": "r42",
-          "style": "explicit",
-          "rank": 1,
-          "doc_rank": 1,
-          "top1": "kalasin#1"
-        },
-        {
-          "id": "r43",
-          "style": "explicit",
-          "rank": null,
-          "doc_rank": 8,
-          "top1": "nakhon-si-thammarat#3"
-        }
-      ]
-    },
-    "bm25|size120": {
-      "chunking": {
-        "strategy": "section",
-        "size": 120,
-        "overlap": 30,
-        "header": true,
-        "drop_boilerplate": true
-      },
-      "mode": "bm25",
-      "chunks": 1851,
-      "metrics": {
-        "recall@1": 0.7209302325581395,
-        "recall@3": 0.8837209302325582,
-        "recall@5": 0.9069767441860465,
-        "mrr@10": 0.8018087855297157,
-        "doc_recall@5": 0.9767441860465116,
-        "n": 43,
-        "unreachable": 0,
-        "recall@5_implicit": 0.9333333333333333,
-        "recall@5_explicit": 0.8461538461538461
-      },
-      "per_query": [
-        {
-          "id": "r01",
-          "style": "implicit",
-          "rank": 1,
-          "doc_rank": 1,
-          "top1": "kanchanaburi#0"
-        },
-        {
-          "id": "r02",
-          "style": "implicit",
-          "rank": 1,
-          "doc_rank": 1,
-          "top1": "udon-thani#5"
-        },
-        {
-          "id": "r03",
-          "style": "implicit",
-          "rank": 1,
-          "doc_rank": 1,
-          "top1": "phang-nga#3"
-        },
-        {
-          "id": "r04",
-          "style": "implicit",
-          "rank": 3,
-          "doc_rank": 3,
-          "top1": "phetchabun#13"
-        },
-        {
-          "id": "r05",
-          "style": "implicit",
-          "rank": null,
-          "doc_rank": null,
-          "top1": "chaiyaphum#2"
-        },
-        {
-          "id": "r06",
-          "style": "implicit",
-          "rank": 1,
-          "doc_rank": 1,
-          "top1": "songkhla#0"
-        },
-        {
-          "id": "r07",
-          "style": "implicit",
-          "rank": 1,
-          "doc_rank": 1,
-          "top1": "lopburi#17"
-        },
-        {
-          "id": "r08",
-          "style": "implicit",
-          "rank": 2,
-          "doc_rank": 2,
-          "top1": "trat#13"
-        },
-        {
-          "id": "r09",
-          "style": "implicit",
-          "rank": 1,
-          "doc_rank": 1,
-          "top1": "buriram#5"
-        },
-        {
-          "id": "r10",
-          "style": "implicit",
-          "rank": 2,
-          "doc_rank": 1,
-          "top1": "surin#20"
-        },
-        {
-          "id": "r11",
-          "style": "implicit",
-          "rank": 1,
-          "doc_rank": 1,
-          "top1": "phuket#16"
-        },
-        {
-          "id": "r12",
-          "style": "implicit",
-          "rank": 1,
-          "doc_rank": 1,
-          "top1": "ranong#0"
-        },
-        {
-          "id": "r13",
-          "style": "implicit",
-          "rank": 1,
-          "doc_rank": 1,
-          "top1": "yala#0"
-        },
-        {
-          "id": "r14",
-          "style": "implicit",
-          "rank": 5,
-          "doc_rank": 3,
-          "top1": "satun#12"
-        },
-        {
-          "id": "r15",
-          "style": "implicit",
-          "rank": 1,
-          "doc_rank": 1,
-          "top1": "surat-thani#5"
-        },
-        {
-          "id": "r16",
-          "style": "implicit",
-          "rank": 1,
-          "doc_rank": 1,
-          "top1": "uttaradit#12"
-        },
-        {
-          "id": "r17",
-          "style": "implicit",
-          "rank": 1,
-          "doc_rank": 1,
-          "top1": "tak#1"
-        },
-        {
-          "id": "r18",
-          "style": "implicit",
-          "rank": 2,
-          "doc_rank": 1,
-          "top1": "mae-hong-son#22"
-        },
-        {
-          "id": "r19",
-          "style": "implicit",
-          "rank": 9,
-          "doc_rank": 4,
-          "top1": "suphan-buri#21"
-        },
-        {
-          "id": "r20",
-          "style": "implicit",
-          "rank": 1,
-          "doc_rank": 1,
-          "top1": "chonburi#0"
-        },
-        {
-          "id": "r21",
-          "style": "implicit",
-          "rank": 3,
-          "doc_rank": 2,
-          "top1": "bueng-kan#8"
-        },
-        {
-          "id": "r22",
-          "style": "implicit",
-          "rank": 1,
-          "doc_rank": 1,
-          "top1": "phra-nakhon-si-ayutthaya#6"
-        },
-        {
-          "id": "r23",
-          "style": "implicit",
-          "rank": 1,
-          "doc_rank": 1,
-          "top1": "uthai-thani#2"
-        },
-        {
-          "id": "r24",
-          "style": "implicit",
-          "rank": 1,
-          "doc_rank": 1,
-          "top1": "sakon-nakhon#2"
-        },
-        {
-          "id": "r25",
-          "style": "implicit",
-          "rank": 1,
-          "doc_rank": 1,
-          "top1": "saraburi#12"
-        },
-        {
-          "id": "r26",
-          "style": "implicit",
-          "rank": 1,
-          "doc_rank": 1,
-          "top1": "lamphun#0"
-        },
-        {
-          "id": "r27",
-          "style": "implicit",
-          "rank": 1,
-          "doc_rank": 1,
-          "top1": "chaiyaphum#2"
-        },
-        {
-          "id": "r28",
-          "style": "implicit",
-          "rank": 1,
-          "doc_rank": 1,
-          "top1": "sing-buri#0"
-        },
-        {
-          "id": "r29",
-          "style": "implicit",
-          "rank": 1,
-          "doc_rank": 1,
-          "top1": "prachuap-khiri-khan#7"
-        },
-        {
-          "id": "r30",
-          "style": "implicit",
-          "rank": 1,
-          "doc_rank": 1,
-          "top1": "trat#9"
-        },
-        {
-          "id": "r31",
-          "style": "explicit",
-          "rank": 2,
-          "doc_rank": 2,
           "top1": "roi-et#1"
         },
         {
@@ -1303,6 +981,7 @@
       ]
     },
     "bm25|size200": {
+      "group": "sweep",
       "chunking": {
         "strategy": "section",
         "size": 200,
@@ -1628,6 +1307,7 @@
       ]
     },
     "bm25|size300": {
+      "group": "sweep",
       "chunking": {
         "strategy": "section",
         "size": 300,
@@ -1952,7 +1632,334 @@
         }
       ]
     },
+    "bm25|size80": {
+      "group": "sweep",
+      "chunking": {
+        "strategy": "section",
+        "size": 80,
+        "overlap": 20,
+        "header": true,
+        "drop_boilerplate": true
+      },
+      "mode": "bm25",
+      "chunks": 2398,
+      "metrics": {
+        "recall@1": 0.7441860465116279,
+        "recall@3": 0.8604651162790697,
+        "recall@5": 0.8604651162790697,
+        "mrr@10": 0.8010335917312661,
+        "doc_recall@5": 0.9534883720930233,
+        "n": 43,
+        "unreachable": 0,
+        "recall@5_implicit": 0.9,
+        "recall@5_explicit": 0.7692307692307693
+      },
+      "per_query": [
+        {
+          "id": "r01",
+          "style": "implicit",
+          "rank": 1,
+          "doc_rank": 1,
+          "top1": "kanchanaburi#0"
+        },
+        {
+          "id": "r02",
+          "style": "implicit",
+          "rank": 1,
+          "doc_rank": 1,
+          "top1": "udon-thani#9"
+        },
+        {
+          "id": "r03",
+          "style": "implicit",
+          "rank": 1,
+          "doc_rank": 1,
+          "top1": "phang-nga#5"
+        },
+        {
+          "id": "r04",
+          "style": "implicit",
+          "rank": 3,
+          "doc_rank": 3,
+          "top1": "phetchabun#16"
+        },
+        {
+          "id": "r05",
+          "style": "implicit",
+          "rank": null,
+          "doc_rank": null,
+          "top1": "chaiyaphum#3"
+        },
+        {
+          "id": "r06",
+          "style": "implicit",
+          "rank": 1,
+          "doc_rank": 1,
+          "top1": "songkhla#22"
+        },
+        {
+          "id": "r07",
+          "style": "implicit",
+          "rank": 1,
+          "doc_rank": 1,
+          "top1": "lopburi#23"
+        },
+        {
+          "id": "r08",
+          "style": "implicit",
+          "rank": 2,
+          "doc_rank": 2,
+          "top1": "trat#18"
+        },
+        {
+          "id": "r09",
+          "style": "implicit",
+          "rank": 1,
+          "doc_rank": 1,
+          "top1": "buriram#7"
+        },
+        {
+          "id": "r10",
+          "style": "implicit",
+          "rank": 2,
+          "doc_rank": 1,
+          "top1": "surin#29"
+        },
+        {
+          "id": "r11",
+          "style": "implicit",
+          "rank": 1,
+          "doc_rank": 1,
+          "top1": "phuket#24"
+        },
+        {
+          "id": "r12",
+          "style": "implicit",
+          "rank": 1,
+          "doc_rank": 1,
+          "top1": "ranong#0"
+        },
+        {
+          "id": "r13",
+          "style": "implicit",
+          "rank": 1,
+          "doc_rank": 1,
+          "top1": "yala#0"
+        },
+        {
+          "id": "r14",
+          "style": "implicit",
+          "rank": null,
+          "doc_rank": 5,
+          "top1": "bangkok#71"
+        },
+        {
+          "id": "r15",
+          "style": "implicit",
+          "rank": 1,
+          "doc_rank": 1,
+          "top1": "surat-thani#8"
+        },
+        {
+          "id": "r16",
+          "style": "implicit",
+          "rank": 1,
+          "doc_rank": 1,
+          "top1": "uttaradit#17"
+        },
+        {
+          "id": "r17",
+          "style": "implicit",
+          "rank": 1,
+          "doc_rank": 1,
+          "top1": "tak#1"
+        },
+        {
+          "id": "r18",
+          "style": "implicit",
+          "rank": 1,
+          "doc_rank": 1,
+          "top1": "mae-hong-son#1"
+        },
+        {
+          "id": "r19",
+          "style": "implicit",
+          "rank": 6,
+          "doc_rank": 4,
+          "top1": "suphan-buri#28"
+        },
+        {
+          "id": "r20",
+          "style": "implicit",
+          "rank": 1,
+          "doc_rank": 1,
+          "top1": "chonburi#0"
+        },
+        {
+          "id": "r21",
+          "style": "implicit",
+          "rank": 1,
+          "doc_rank": 1,
+          "top1": "nong-khai#3"
+        },
+        {
+          "id": "r22",
+          "style": "implicit",
+          "rank": 1,
+          "doc_rank": 1,
+          "top1": "phra-nakhon-si-ayutthaya#8"
+        },
+        {
+          "id": "r23",
+          "style": "implicit",
+          "rank": 1,
+          "doc_rank": 1,
+          "top1": "uthai-thani#2"
+        },
+        {
+          "id": "r24",
+          "style": "implicit",
+          "rank": 1,
+          "doc_rank": 1,
+          "top1": "sakon-nakhon#2"
+        },
+        {
+          "id": "r25",
+          "style": "implicit",
+          "rank": 1,
+          "doc_rank": 1,
+          "top1": "saraburi#15"
+        },
+        {
+          "id": "r26",
+          "style": "implicit",
+          "rank": 1,
+          "doc_rank": 1,
+          "top1": "lamphun#1"
+        },
+        {
+          "id": "r27",
+          "style": "implicit",
+          "rank": 1,
+          "doc_rank": 1,
+          "top1": "chaiyaphum#3"
+        },
+        {
+          "id": "r28",
+          "style": "implicit",
+          "rank": 1,
+          "doc_rank": 1,
+          "top1": "sing-buri#0"
+        },
+        {
+          "id": "r29",
+          "style": "implicit",
+          "rank": 1,
+          "doc_rank": 1,
+          "top1": "prachuap-khiri-khan#11"
+        },
+        {
+          "id": "r30",
+          "style": "implicit",
+          "rank": 1,
+          "doc_rank": 1,
+          "top1": "trat#13"
+        },
+        {
+          "id": "r31",
+          "style": "explicit",
+          "rank": 1,
+          "doc_rank": 1,
+          "top1": "phichit#6"
+        },
+        {
+          "id": "r32",
+          "style": "explicit",
+          "rank": 1,
+          "doc_rank": 1,
+          "top1": "ang-thong#0"
+        },
+        {
+          "id": "r33",
+          "style": "explicit",
+          "rank": 1,
+          "doc_rank": 1,
+          "top1": "lampang#0"
+        },
+        {
+          "id": "r34",
+          "style": "explicit",
+          "rank": 1,
+          "doc_rank": 1,
+          "top1": "surat-thani#0"
+        },
+        {
+          "id": "r35",
+          "style": "explicit",
+          "rank": 1,
+          "doc_rank": 1,
+          "top1": "roi-et#1"
+        },
+        {
+          "id": "r36",
+          "style": "explicit",
+          "rank": null,
+          "doc_rank": 1,
+          "top1": "chiang-mai#5"
+        },
+        {
+          "id": "r37",
+          "style": "explicit",
+          "rank": 9,
+          "doc_rank": 2,
+          "top1": "phang-nga#4"
+        },
+        {
+          "id": "r38",
+          "style": "explicit",
+          "rank": 2,
+          "doc_rank": 1,
+          "top1": "krabi#2"
+        },
+        {
+          "id": "r39",
+          "style": "explicit",
+          "rank": 3,
+          "doc_rank": 1,
+          "top1": "nong-khai#1"
+        },
+        {
+          "id": "r40",
+          "style": "explicit",
+          "rank": 1,
+          "doc_rank": 1,
+          "top1": "nakhon-si-thammarat#1"
+        },
+        {
+          "id": "r41",
+          "style": "explicit",
+          "rank": 1,
+          "doc_rank": 1,
+          "top1": "phayao#9"
+        },
+        {
+          "id": "r42",
+          "style": "explicit",
+          "rank": 1,
+          "doc_rank": 1,
+          "top1": "kalasin#1"
+        },
+        {
+          "id": "r43",
+          "style": "explicit",
+          "rank": null,
+          "doc_rank": 10,
+          "top1": "nakhon-si-thammarat#2"
+        }
+      ]
+    },
     "bm25|no contextual header": {
+      "group": "ablation",
       "chunking": {
         "strategy": "section",
         "size": 120,
@@ -2276,331 +2283,7 @@
           "top1": "ubon-ratchathani#0"
         }
       ]
-    },
-    "bm25|keep boilerplate": {
-      "chunking": {
-        "strategy": "section",
-        "size": 120,
-        "overlap": 30,
-        "header": true,
-        "drop_boilerplate": false
-      },
-      "mode": "bm25",
-      "chunks": 1932,
-      "metrics": {
-        "recall@1": 0.7209302325581395,
-        "recall@3": 0.8837209302325582,
-        "recall@5": 0.9069767441860465,
-        "mrr@10": 0.7979328165374677,
-        "doc_recall@5": 0.9767441860465116,
-        "n": 43,
-        "unreachable": 0,
-        "recall@5_implicit": 0.9333333333333333,
-        "recall@5_explicit": 0.8461538461538461
-      },
-      "per_query": [
-        {
-          "id": "r01",
-          "style": "implicit",
-          "rank": 1,
-          "doc_rank": 1,
-          "top1": "kanchanaburi#0"
-        },
-        {
-          "id": "r02",
-          "style": "implicit",
-          "rank": 1,
-          "doc_rank": 1,
-          "top1": "udon-thani#5"
-        },
-        {
-          "id": "r03",
-          "style": "implicit",
-          "rank": 1,
-          "doc_rank": 1,
-          "top1": "phang-nga#3"
-        },
-        {
-          "id": "r04",
-          "style": "implicit",
-          "rank": 3,
-          "doc_rank": 3,
-          "top1": "phetchabun#13"
-        },
-        {
-          "id": "r05",
-          "style": "implicit",
-          "rank": null,
-          "doc_rank": null,
-          "top1": "chaiyaphum#2"
-        },
-        {
-          "id": "r06",
-          "style": "implicit",
-          "rank": 1,
-          "doc_rank": 1,
-          "top1": "songkhla#0"
-        },
-        {
-          "id": "r07",
-          "style": "implicit",
-          "rank": 1,
-          "doc_rank": 1,
-          "top1": "lopburi#17"
-        },
-        {
-          "id": "r08",
-          "style": "implicit",
-          "rank": 2,
-          "doc_rank": 2,
-          "top1": "trat#13"
-        },
-        {
-          "id": "r09",
-          "style": "implicit",
-          "rank": 1,
-          "doc_rank": 1,
-          "top1": "buriram#5"
-        },
-        {
-          "id": "r10",
-          "style": "implicit",
-          "rank": 2,
-          "doc_rank": 1,
-          "top1": "surin#20"
-        },
-        {
-          "id": "r11",
-          "style": "implicit",
-          "rank": 1,
-          "doc_rank": 1,
-          "top1": "phuket#16"
-        },
-        {
-          "id": "r12",
-          "style": "implicit",
-          "rank": 1,
-          "doc_rank": 1,
-          "top1": "ranong#0"
-        },
-        {
-          "id": "r13",
-          "style": "implicit",
-          "rank": 1,
-          "doc_rank": 1,
-          "top1": "yala#0"
-        },
-        {
-          "id": "r14",
-          "style": "implicit",
-          "rank": 5,
-          "doc_rank": 3,
-          "top1": "satun#12"
-        },
-        {
-          "id": "r15",
-          "style": "implicit",
-          "rank": 1,
-          "doc_rank": 1,
-          "top1": "surat-thani#5"
-        },
-        {
-          "id": "r16",
-          "style": "implicit",
-          "rank": 1,
-          "doc_rank": 1,
-          "top1": "uttaradit#12"
-        },
-        {
-          "id": "r17",
-          "style": "implicit",
-          "rank": 1,
-          "doc_rank": 1,
-          "top1": "tak#1"
-        },
-        {
-          "id": "r18",
-          "style": "implicit",
-          "rank": 2,
-          "doc_rank": 1,
-          "top1": "mae-hong-son#22"
-        },
-        {
-          "id": "r19",
-          "style": "implicit",
-          "rank": 9,
-          "doc_rank": 4,
-          "top1": "suphan-buri#21"
-        },
-        {
-          "id": "r20",
-          "style": "implicit",
-          "rank": 1,
-          "doc_rank": 1,
-          "top1": "chonburi#0"
-        },
-        {
-          "id": "r21",
-          "style": "implicit",
-          "rank": 3,
-          "doc_rank": 2,
-          "top1": "bueng-kan#8"
-        },
-        {
-          "id": "r22",
-          "style": "implicit",
-          "rank": 1,
-          "doc_rank": 1,
-          "top1": "phra-nakhon-si-ayutthaya#6"
-        },
-        {
-          "id": "r23",
-          "style": "implicit",
-          "rank": 1,
-          "doc_rank": 1,
-          "top1": "uthai-thani#2"
-        },
-        {
-          "id": "r24",
-          "style": "implicit",
-          "rank": 1,
-          "doc_rank": 1,
-          "top1": "sakon-nakhon#2"
-        },
-        {
-          "id": "r25",
-          "style": "implicit",
-          "rank": 1,
-          "doc_rank": 1,
-          "top1": "saraburi#12"
-        },
-        {
-          "id": "r26",
-          "style": "implicit",
-          "rank": 1,
-          "doc_rank": 1,
-          "top1": "lamphun#0"
-        },
-        {
-          "id": "r27",
-          "style": "implicit",
-          "rank": 1,
-          "doc_rank": 1,
-          "top1": "chaiyaphum#2"
-        },
-        {
-          "id": "r28",
-          "style": "implicit",
-          "rank": 1,
-          "doc_rank": 1,
-          "top1": "sing-buri#0"
-        },
-        {
-          "id": "r29",
-          "style": "implicit",
-          "rank": 1,
-          "doc_rank": 1,
-          "top1": "prachuap-khiri-khan#7"
-        },
-        {
-          "id": "r30",
-          "style": "implicit",
-          "rank": 1,
-          "doc_rank": 1,
-          "top1": "trat#9"
-        },
-        {
-          "id": "r31",
-          "style": "explicit",
-          "rank": 3,
-          "doc_rank": 3,
-          "top1": "roi-et#1"
-        },
-        {
-          "id": "r32",
-          "style": "explicit",
-          "rank": 1,
-          "doc_rank": 1,
-          "top1": "ang-thong#0"
-        },
-        {
-          "id": "r33",
-          "style": "explicit",
-          "rank": 1,
-          "doc_rank": 1,
-          "top1": "lampang#0"
-        },
-        {
-          "id": "r34",
-          "style": "explicit",
-          "rank": 1,
-          "doc_rank": 1,
-          "top1": "surat-thani#0"
-        },
-        {
-          "id": "r35",
-          "style": "explicit",
-          "rank": 1,
-          "doc_rank": 1,
-          "top1": "roi-et#1"
-        },
-        {
-          "id": "r36",
-          "style": "explicit",
-          "rank": 1,
-          "doc_rank": 1,
-          "top1": "chiang-mai#2"
-        },
-        {
-          "id": "r37",
-          "style": "explicit",
-          "rank": null,
-          "doc_rank": 2,
-          "top1": "phang-nga#2"
-        },
-        {
-          "id": "r38",
-          "style": "explicit",
-          "rank": 1,
-          "doc_rank": 1,
-          "top1": "krabi#1"
-        },
-        {
-          "id": "r39",
-          "style": "explicit",
-          "rank": 2,
-          "doc_rank": 2,
-          "top1": "udon-thani#18"
-        },
-        {
-          "id": "r40",
-          "style": "explicit",
-          "rank": 1,
-          "doc_rank": 1,
-          "top1": "nakhon-si-thammarat#1"
-        },
-        {
-          "id": "r41",
-          "style": "explicit",
-          "rank": 1,
-          "doc_rank": 1,
-          "top1": "phayao#1"
-        },
-        {
-          "id": "r42",
-          "style": "explicit",
-          "rank": 1,
-          "doc_rank": 1,
-          "top1": "kalasin#0"
-        },
-        {
-          "id": "r43",
-          "style": "explicit",
-          "rank": null,
-          "doc_rank": 1,
-          "top1": "bangkok#11"
-        }
-      ]
     }
-  }
+  },
+  "skipped": []
 }

@@ -22,6 +22,8 @@ def _i(name: str, default: int) -> int:
 
 CHAT_MODEL = os.environ.get("CHAT_MODEL", "gemma-4-E4B-it")
 EMBED_MODEL = os.environ.get("EMBED_MODEL", "bge-m3")
+EMBED_CONCURRENCY = _i("EMBED_CONCURRENCY", 2)
+LLM_RETRY_ATTEMPTS = _i("LLM_RETRY_ATTEMPTS", 10)  # the class proxy has flaky spells
 
 RAW_DIR = ROOT / "data" / "raw"
 DOCS_DIR = RAW_DIR / "provinces"

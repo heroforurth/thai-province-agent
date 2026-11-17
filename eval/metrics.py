@@ -51,7 +51,8 @@ REFUSAL_MARKERS = (
     "could not find", "couldn't find", "can't find", "cannot find", "don't say", "do not say",
     "does not say", "not in my sources", "no information", "not mentioned", "do not contain",
     "don't contain", "does not contain", "doesn't contain", "not available", "unable to find",
-    "i don't know", "not provided", "no relevant", "can only answer",
+    "i don't know", "not provided", "no relevant", "can only answer", "do not have", "don't have",
+    "does not have information", "no data",
 )
 
 

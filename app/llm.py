@@ -9,6 +9,7 @@ from __future__ import annotations
 
 import logging
 import time
+from concurrent.futures import ThreadPoolExecutor
 from collections.abc import Callable, Iterator
 from functools import lru_cache
 from typing import TypeVar
@@ -22,10 +23,11 @@ log = logging.getLogger(__name__)
 T = TypeVar("T")
 
 
-def _with_retry(fn: Callable[[], T], attempts: int = 6) -> T:
+def _with_retry(fn: Callable[[], T], attempts: int | None = None) -> T:
     """The class proxy intermittently answers with a spurious 401 ("column t.tpd_limit
     does not exist" - a proxy-side DB error), which the SDK does not retry. Retry any
     API error a bounded number of times with exponential backoff, then give up."""
+    attempts = attempts or config.LLM_RETRY_ATTEMPTS
     for i in range(attempts):
         try:
             return fn()
@@ -73,11 +75,17 @@ def chat_stream(
 
 
 def embed(texts: list[str], *, batch_size: int = 64) -> list[list[float]]:
-    """Embed texts with bge-m3. Queries and chunks MUST use the same model."""
-    out: list[list[float]] = []
-    for i in range(0, len(texts), batch_size):
-        batch = texts[i : i + batch_size]
+    """Embed texts with bge-m3. Queries and chunks MUST use the same model.
+    Batches are sent concurrently (EMBED_CONCURRENCY) because the proxy is slow per call."""
+    batches = [texts[i : i + batch_size] for i in range(0, len(texts), batch_size)]
+
+    def one(batch: list[str]) -> list[list[float]]:
         resp = _with_retry(lambda: client().embeddings.create(model=config.EMBED_MODEL, input=batch))
-        out.extend(d.embedding for d in sorted(resp.data, key=lambda d: d.index))
-        log.info("embedded %d/%d", min(i + batch_size, len(texts)), len(texts))
-    return out
+        return [d.embedding for d in sorted(resp.data, key=lambda d: d.index)]
+
+    if len(batches) <= 1:
+        return one(batches[0]) if batches else []
+    with ThreadPoolExecutor(max_workers=config.EMBED_CONCURRENCY) as pool:
+        results = list(pool.map(one, batches))  # map preserves order
+    log.info("embedded %d texts", len(texts))
+    return [v for r in results for v in r]
